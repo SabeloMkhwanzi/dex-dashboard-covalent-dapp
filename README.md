@@ -1,35 +1,57 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Hackathon: DeFi & Cross-chain Interoperability Hackathon
+## DEX Analytics Dashboard Template
 
-## Getting Started
+### Prize Bounty
+* Prize Pool: 2,500 USDT
+* Prize pool distributed to a maximum of 3 projects
+* Top projects will be eligible for post-hackathon grants to continue development
 
-First, run the development server:
+### Challenge Description
+The Covalent API empowers an army of developers, analysts and 'data nerds' to BUIDL using the richest and most robust data infrastructure for the entire blockchain ecosystem. This challenge is to create a basic open source, multi-chain compatible, DEX Analytics Dashboard Template, powered by the Covalent API.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+####This template may then be used by any DEX on any (or multiple) Covalent supported blockchains to visualize key analytics around:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+* Pools, swaps, liquidity, volumes
+* Lending and borrowing stats
+* Trading pair positions, leverage and level of profitability
+* Fees
+* Yield farmers
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+### Data presented can include both on-chain and off-chain information.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+### Some resources which may be useful in putting together this template include:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+* https://github.com/pancakeswap/pancake-frontend
+* https://www.covalenthq.com/docs/learn/guides/configure/uniswap-clone
+* https://github.com/tradingview/
 
-## Learn More
+### Some key features may include visualizations to gauge:
 
-To learn more about Next.js, take a look at the following resources:
+*LP concentration vs decentralization
+* DEX sentiment analysis based on tweets and other social media messages
+* The overall activity and health metrics of a DEX
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Submission Requirements
+* Participants from everywhere can participate in this bounty
+* You can submit individually, or as a team. Teams should include no more than four people.
+* All of your team participants will need to register here
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### What makes a submission complete?
+* A presentation (PDF, Slidedeck etc) describing the project
+* Link to a video demo (YouTube only) is advisable, but not strictly required
+* Your DEX Analytics Dashboard template must be web hosted and publicly accessible
+* Your DEX Analytics Dashboard template code repo must be publicly accessible
+* The submission must be released under a GPLv3 compatible license
 
-## Deploy on Vercel
+## Judging Criteria
+### Submissions will be judged by Covalent based on their technical merits as well as the likelihood of implementation.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+In general, submissions are graded on a 1-5 scale in each of the following categories
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# dex-dashboard-covalent-dapp
+* Originality: Does the template incorporate something entirely novel, or at least take a fresh approach to an existing problem?
+* Execution: Is the template usable in its current state? Is the user experience smooth? Does everything appear to work? Is it well designed?
+* Usefulness: Is the template practical? Is it something DEX's would actually use?
+* Learning: Did the individual or team stretch themselves and push the boundaries of learning in this space?
+
+### Winner Announcement Date
+### Wednesday November 10, 2021
