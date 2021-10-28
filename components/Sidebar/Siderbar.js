@@ -33,6 +33,9 @@ import { FaMoon, FaSun } from "react-icons/fa";
 import React from "react";
 //import { Logo } from "@choc-ui/logo";
 
+import DashboardHome from "../../pages/DashboardHome";
+import { Dashboard } from "@material-ui/icons";
+
 export default function Swibc() {
   const sidebar = useDisclosure();
   const integrations = useDisclosure();
@@ -186,13 +189,9 @@ export default function Swibc() {
         </Flex>
         
         {/* Content below  */}      
-          <Box bg={useColorModeValue("white", "gray.900")} as="main" p="4">
-                  <Box>
-                      <VStack>
-                          <Text color="GrayText" fontSize="sm">OVERVIEW</Text>
-                          <Text color="FFFFFF" fontSize="lg">Dashboard</Text>
-                      </VStack>
-                  </Box>
+        <Box bg={useColorModeValue("white", "gray.900")} as="main" p="4">
+          
+         <DashboardHome />  
         </Box>
       </Box>
     </Box>
