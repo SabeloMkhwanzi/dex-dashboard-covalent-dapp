@@ -161,7 +161,7 @@ export default function Swibc() {
           />
           <InputGroup w="96" display={{ base: "none", md: "flex" }}>
             <InputLeftElement color="gray.500" children={<FiSearch />} />
-            <Input borderRadius="full" placeholder="Search..." />
+            <Input borderColor="green.900" borderRadius="full" placeholder="Search..." />
           </InputGroup>
             
          <Box
@@ -176,11 +176,12 @@ export default function Swibc() {
           
               
             <IconButton
+              borderRadius="lg"
+              borderWidth={3}
+              borderColor="green.900"
               size="md"
               fontSize="lg"
               aria-label={`Switch to ${text} mode`}
-              variant="ghost"
-              color="current"
               ml={{ base: "0", md: "3" }}
               onClick={toggleMode}
               icon={<SwitchIcon />}
