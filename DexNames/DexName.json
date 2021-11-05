@@ -1,0 +1,10 @@
+
+{ 
+        "Dexnames":[
+            {"chainID": "1", "dexName": "sushiswap"},
+            {"chainID": "137", "dexName": "quickswap"},
+            {"chainID": "43114", "dexName": "pangolin"},
+            {"chainID": "250",  "dexName": "spiritswap"},
+            {"chainID": "250",  "dexName": "spookyswap"}
+           ]
+ }

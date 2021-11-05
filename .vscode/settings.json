@@ -1,17 +1,29 @@
 {
     "cSpell.words": [
+        "Aboutpage",
+        "apexcharts",
         "APIKEY",
         "chakra",
+        "chartdata",
+        "chartjs",
         "ckey",
+        "datapoints",
+        "datetime",
         "dexname",
+        "Dexnames",
         "fbaf",
+        "Hackathon",
+        "liquidityquote",
         "millify",
+        "Neighbours",
         "Quickswap",
         "reduxjs",
         "Siderbar",
         "spiritswap",
         "Spookyswap",
         "sushiswap",
-        "Swibc"
+        "Swibc",
+        "xaxis",
+        "yaxis"
     ]
 }

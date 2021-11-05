@@ -8,7 +8,7 @@ import { useGetHealthQuery } from "../../services/healthCovalentApi";
 const Health = () => {
     const { data, isFetching } = useGetHealthQuery()
     const chainItems = data?.data?.items;
-    if (isFetching) return  <Progress hasStripe color="green.900" value={84} />
+    if (isFetching) return  <Progress size="xs" isIndeterminate />
     
     return (
       
@@ -16,6 +16,7 @@ const Health = () => {
     <Text textAlign="left"
      fontWeight="bold"
      paddingBottom="5"
+     paddingTop="18"
     >HEALTH
     </Text>
          {chainItems.map(items =>( 
@@ -70,7 +71,7 @@ const Health = () => {
             mt={2}
             color={useColorModeValue("gray.800", "white")}
           >
-            Last Block Signed At
+            Last Block Signed
           </chakra.h1>
           <chakra.p
             fontSize="sm"
@@ -135,7 +136,7 @@ const Health = () => {
             color={useColorModeValue("gray.800", "white")}
             
           >
-            Synced Block Signed At
+            Synced Block Signed
           </chakra.h1>
           <chakra.p
             fontSize="sm"

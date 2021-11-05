@@ -7,24 +7,35 @@ import { chakra, HStack, Badge, Box, useColorModeValue, SimpleGrid, Text, Progre
 
 import { useGetEcosystemQuery } from "../../services/ecosystemCovalentApi"
 
-import LineChart from '../Chart/LineChart'
-
+import DexButton from '../../components/Button/DexButton'
 
 const Ecosystem = () => {
   const { data, isFetching } = useGetEcosystemQuery();  
   const chainItems = data?.data?.items
   console.log(data);
   
-   if (isFetching) return  <Progress size="xs" isIndeterminate />
+  if (isFetching) return  <Progress size="xs" isIndeterminate />
     
     return (
       <div>
         
-  <Box justifyContent="center" textAlign="center" paddingTop="34">
+  <Box justifyContent="center" textAlign="center" paddingTop="5" paddingBottom="12">
+    <DexButton />
     <Text textAlign="left"
      fontWeight="bold"
-    >ECOSYSTEM
+     fontSize="xl"
+    >All Tokens
     </Text>
+    <Text
+     fontWeight="light"   
+     as="h6"
+     color="gray.500"
+     textAlign="left"
+     >
+      OVERVIEW
+     </Text>
+
+     
                    
       {/*  dex_name + gas_token_price_quote + updated_at  */}
       
@@ -69,7 +80,7 @@ const Ecosystem = () => {
       ))}    
           
 
-
+          
        {chainItems.map(items => (      
      <SimpleGrid columns={[1, null, 3]} spacing={4} key={items.chain_id} >           
       <Box
@@ -173,10 +184,7 @@ const Ecosystem = () => {
 
       </SimpleGrid> 
       ))}
-     </Box>
-       
-    <LineChart />
-      
+     </Box>     
   </div>
  )
 }

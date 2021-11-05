@@ -3,7 +3,8 @@ import { ecosystemApi } from '../services/ecosystemCovalentApi';
 import { healthApi } from '../services/healthCovalentApi';
 import { poolsApi } from '../services/poolsCovalentApi';
 import { tokensApi } from '../services/tokensCovalentApi';
- 
+
+
 export default configureStore({
     reducer: {
         [ecosystemApi.reducerPath]: ecosystemApi.reducer,
@@ -12,3 +13,4 @@ export default configureStore({
         [tokensApi.reducerPath]: tokensApi.reducer,
     },
 });
+

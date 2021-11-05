@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-undef */
 /* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable react/no-children-prop */
 import React from "react";
@@ -35,8 +36,12 @@ import { FaMoon, FaSun } from "react-icons/fa";
 
 //import { Logo } from "@choc-ui/logo";
 
-import Home from "../../pages/home";
+import Aboutpage from '../components/About/Aboutpage'
+import Tables from '../components/Table/Tables'
+
+
 import { Dashboard } from "@material-ui/icons";
+import Footers from "../components/Footer/Footers";
 
 export default function Swibc() {
   const sidebar = useDisclosure();
@@ -194,10 +199,12 @@ export default function Swibc() {
         
         {/* Content below  */}      
         <Box bg={useColorModeValue("white", "gray.900")} as="main" p="4">
-          
-         <Home />  
+
+         <Tables /> 
+         <Aboutpage />  
         </Box>
       </Box>
+      <Footers />
     </Box>
   );
 }
