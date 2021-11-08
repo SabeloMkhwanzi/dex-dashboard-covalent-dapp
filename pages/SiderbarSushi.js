@@ -35,7 +35,7 @@ import { FaMoon, FaSun } from "react-icons/fa";
 
 //import { Logo } from "@choc-ui/logo";
 
-import HomeSushi from  "../components/HomePages/homeSushi";
+import HomeSushi from  "../components/HomePages/HomeSushi";
 import Footer from "../components/Footer/Footers"
 
 import { Dashboard } from "@material-ui/icons";
