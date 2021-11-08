@@ -30,15 +30,14 @@ import { GiToken } from "react-icons/gi"
 import { FcAbout } from "react-icons/fc"
 import { FiMenu, FiSearch } from "react-icons/fi";
 import { HiCode, HiCollection } from "react-icons/hi";
-import { Dashboard } from "@material-ui/icons";
 import { MdHome, MdKeyboardArrowRight, MdGeneratingTokens, MdOutlineGames } from "react-icons/md";
 import { FaMoon, FaSun } from "react-icons/fa";
 
 //import { Logo } from "@choc-ui/logo";
 
-import Token from "../components/Tokens/Token";
-import Footers from "../components/Footer/Footers";
-
+import HomeSpooky from "../components/HomePages/homeSpooky";
+import Footer from "../components/Footer/Footers"
+import { Dashboard } from "@material-ui/icons";
 
 export default function Swibc() {
   const sidebar = useDisclosure();
@@ -196,11 +195,11 @@ export default function Swibc() {
         
         {/* Content below  */}      
         <Box bg={useColorModeValue("white", "gray.900")} as="main" p="4">
-         <Token />
-         
+          
+         <HomeSpooky />  
         </Box>
+        <Footer />
       </Box>
-      <Footers />
     </Box>
   );
 }

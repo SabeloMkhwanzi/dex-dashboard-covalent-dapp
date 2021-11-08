@@ -7,33 +7,29 @@ import { chakra, HStack, Badge, Box, useColorModeValue, SimpleGrid, Text, Progre
 
 import { useGetEcosystemQuery } from "../../services/ecosystemCovalentApi"
 
-import LineChart from '../Chart/LineChart'
-
-
 const Ecosystem = () => {
-  const { data, isFetching } = useGetEcosystemQuery();  
+  const { data, isFetching } = useGetEcosystemQuery();
   const chainItems = data?.data?.items
-  console.log(data);
-  
+
    if (isFetching) return  <Progress size="xs" isIndeterminate />
-    
+
     return (
       <div>
-        
+
   <Box justifyContent="center" textAlign="center" paddingTop="34">
     <Text textAlign="left"
      fontWeight="bold"
     >ECOSYSTEM
     </Text>
-                   
+
       {/*  dex_name + gas_token_price_quote + updated_at  */}
-      
+
       {chainItems.map(items =>(
-      <HStack key={items.chain_id}>       
+      <HStack key={items.chain_id}>
       <Box p="6" >
           <Box d="flex" alignItems="baseline">
             <Badge rounded="full" px="2" colorScheme="teal">
-              Dex Name 
+              Dex Name
             </Badge>
             <Box
               color="gray.500"
@@ -61,19 +57,19 @@ const Ecosystem = () => {
               textTransform="uppercase"
               ml="2"
             >
-               {millify(items.gas_token_price_quote)}
+               ${millify(items.gas_token_price_quote)}
             </Box>
           </Box>
-       </Box>    
+       </Box>
       </HStack>
-      ))}    
-          
+      ))}
 
 
-       {chainItems.map(items => (      
-     <SimpleGrid columns={[1, null, 3]} spacing={4} key={items.chain_id} >           
+
+       {chainItems.map(items => (
+     <SimpleGrid columns={[1, null, 3]} spacing={4} key={items.chain_id} >
       <Box
-        w="full" maxW="xs" mx="auto" px={4} py={3} 
+        w="full" maxW="xs" mx="auto" px={4} py={3}
         bg={useColorModeValue("white", "gray.800")}
         shadow="xl"
         rounded="md "
@@ -81,15 +77,15 @@ const Ecosystem = () => {
         borderWidth={1}
         borderColor="green.900"
       >
-    
-     {/*Last Block Hight : Section */}                
+
+     {/*Last Block Hight : Section */}
         <Box>
           <chakra.h1
             fontSize="lg"
             fontWeight="normal"
             mt={2}
             color={useColorModeValue("gray.800", "white")}
-            
+
           >
             Total Active Pair(7d)
           </chakra.h1>
@@ -101,11 +97,11 @@ const Ecosystem = () => {
            as="samp"
           >
             {items.total_active_pairs_7d}
-            
+
           </chakra.p>
-        </Box>   
+        </Box>
       </Box>
-      
+
        <Box
         w="full" maxW="xs" mx="auto" px={4} py={3}
         bg={useColorModeValue("white", "gray.800")}
@@ -115,8 +111,8 @@ const Ecosystem = () => {
         borderWidth={1}
         borderColor="green.900"
       >
-      
-      {/*Last Block Signed At : Section */}               
+
+      {/*Last Block Signed At : Section */}
         <Box>
           <chakra.h1
             fontSize="lg"
@@ -133,9 +129,9 @@ const Ecosystem = () => {
             as="samp"
           >
             ${millify(items.total_fees_24h)}
-            
+
           </chakra.p>
-        </Box>   
+        </Box>
       </Box>
 
 
@@ -148,8 +144,8 @@ const Ecosystem = () => {
         borderWidth={1}
         borderColor="green.900"
       >
-      
-     {/*Synced Block height : Section */}                
+
+     {/*Synced Block height : Section */}
         <Box>
           <chakra.h1
             fontSize="lg"
@@ -166,20 +162,18 @@ const Ecosystem = () => {
             as="samp"
           >
             {items.total_swaps_24h}
-            
+
           </chakra.p>
-        </Box>   
+        </Box>
       </Box>
 
-      </SimpleGrid> 
+      </SimpleGrid>
       ))}
      </Box>
-       
-    <LineChart />
-      
+
   </div>
  )
 }
 
-   
+
 export default Ecosystem;

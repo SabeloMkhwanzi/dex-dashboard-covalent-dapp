@@ -37,8 +37,6 @@ import { FaMoon, FaSun } from "react-icons/fa";
 //import { Logo } from "@choc-ui/logo";
 
 import Aboutpage from '../components/About/Aboutpage'
-import Tables from '../components/Table/Tables'
-
 
 import { Dashboard } from "@material-ui/icons";
 import Footers from "../components/Footer/Footers";
@@ -48,12 +46,12 @@ export default function Swibc() {
   const integrations = useDisclosure();
   const { toggleColorMode: toggleMode } = useColorMode();
   const SwitchIcon = useColorModeValue(FaMoon, FaSun);
-  const text = useColorModeValue("dark", "light");  
+  const text = useColorModeValue("dark", "light");
 
   const NavItem = (props) => {
     const { icon, children, ...rest } = props;
     return (
-        
+
       <Flex
         align="center"
         px="4"
@@ -171,7 +169,7 @@ export default function Swibc() {
             <InputLeftElement color="gray.500" children={<FiSearch />} />
             <Input borderColor="green.900" borderRadius="full" placeholder="Search..." />
           </InputGroup>
-            
+
          <Box
           as="iframe"
           src="https://coinhippo.io?widget=price-marquee&theme=?"
@@ -179,10 +177,10 @@ export default function Swibc() {
           frameBorder="0"
           width="100%"
           height="35"
-          />      
+          />
           <Flex align="center">
-          
-              
+
+
             <IconButton
               borderRadius="lg"
               borderWidth={3}
@@ -196,12 +194,10 @@ export default function Swibc() {
             />
           </Flex>
         </Flex>
-        
-        {/* Content below  */}      
-        <Box bg={useColorModeValue("white", "gray.900")} as="main" p="4">
 
-         <Tables /> 
-         <Aboutpage />  
+        {/* Content below  */}
+        <Box bg={useColorModeValue("white", "gray.900")} as="main" p="4">
+          <Aboutpage />
         </Box>
       </Box>
       <Footers />

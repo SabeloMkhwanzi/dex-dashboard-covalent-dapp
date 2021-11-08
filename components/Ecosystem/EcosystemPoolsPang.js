@@ -3,28 +3,80 @@
 import React  from "react";
 import Moment from "react-moment";
 import millify from "millify";
-import { chakra, HStack, Badge, Box, useColorModeValue, SimpleGrid, Text, Progress, } from "@chakra-ui/react";
+import { chakra, HStack, Badge, Box, useColorModeValue, SimpleGrid, Text, Progress,  Menu, MenuButton, MenuList, MenuItem, Avatar, Link, Button } from "@chakra-ui/react";
 
-import { useGetEcosystemQuery } from "../../services/ecosystemCovalentApi"
+import { useGetEcosystemQuery } from "../../services/ecosystemCovalentApiPang"
 
-import DexButton from '../../components/Button/DexButton'
 
 const Ecosystem = () => {
   const { data, isFetching } = useGetEcosystemQuery();  
   const chainItems = data?.data?.items
-  console.log(data);
   
-  if (isFetching) return  <Progress size="xs" isIndeterminate />
+  
+   if (isFetching) return  <Progress size="xs" isIndeterminate />
     
     return (
       <div>
         
   <Box justifyContent="center" textAlign="center" paddingTop="5" paddingBottom="12">
-    <DexButton />
+    <Menu>
+            <MenuButton as={Button}
+                maxW="150px"
+                fontWeight="bold"
+                float="right"
+                borderColor="blackAlpha.900"
+                bg="green.700"
+            >
+                Select Dex
+            </MenuButton>
+            <MenuList>
+                <MenuItem minH="48px">
+                <Avatar
+                    
+                    src="https://cryptologos.cc/logos/sushiswap-sushi-logo.png"
+                    alt=""
+                    mr="12px"
+                />
+                <Link href={'poolSushi'}>Sushiswap</Link>
+                </MenuItem>
+                <MenuItem minH="40px">
+                <Avatar
+                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgKIOOAwtjg8KA2YjlWOfRkP1qVVUfz51KGBlJrbRdCP1Ca-SYy5Ef7nRDHgOgN0DszuE&usqp=CAU"   
+                    alt=""
+                    mr="12px"
+                />
+                <Link href={'poolQuick'}>Quickswap</Link>
+                </MenuItem>
+                <MenuItem minH="40px">
+                <Avatar
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY-F9CiUlLJdNkfMNT7AQ5a_0aO1F6yQkZzAYB3KBo5QSLRmK6oWWk7xa5OKxtgR5PDCY&usqp=CAU"
+                    alt=""
+                    mr="12px"
+                />
+                 <Link href={'poolPang'}>Pangolin</Link>
+                </MenuItem>
+                <MenuItem minH="40px">
+                <Avatar
+                    src="https://assets.coingecko.com/coins/images/15223/large/logo_200x200.png?1621992076"
+                    alt=""
+                    mr="12px"
+                />
+                <Link href={'poolSpooky'}>Spookyswap</Link>
+                </MenuItem>
+                <MenuItem minH="40px">
+                <Avatar
+                    src="https://www.spiritswap.finance/assets/imgs/spiritswap_logo_xl.png"
+                    alt=""
+                    mr="12px"
+                />
+                <Link href={'poolSpirit'}>Spiritswap</Link>
+                </MenuItem>
+            </MenuList>
+            </Menu>
     <Text textAlign="left"
      fontWeight="bold"
      fontSize="xl"
-    >All Tokens
+    >All Pools
     </Text>
     <Text
      fontWeight="light"   
@@ -72,7 +124,7 @@ const Ecosystem = () => {
               textTransform="uppercase"
               ml="2"
             >
-               {millify(items.gas_token_price_quote)}
+               ${millify(items.gas_token_price_quote)}
             </Box>
           </Box>
        </Box>    

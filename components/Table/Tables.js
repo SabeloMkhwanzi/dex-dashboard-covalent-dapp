@@ -1,140 +1,140 @@
-import faker from 'faker';
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+/* eslint-disable react-hooks/rules-of-hooks */
+import React from 'react'
+import {
+  Table,
+  Thead,
+  Tbody,
+  Tfoot,
+  Tr,
+  Th,
+  Td,
+  TableCaption,
+  Box,
+  Text,
+  useColorModeValue,
+  Flex,
+  Wrap,
+  WrapItem,
+  Avatar,
+  HStack,
+  Image,
+  Progress, 
+} from "@chakra-ui/react"
 import { 
-    Table,
+    
     TableBody,
     TableCell,
     TableContainer,
     TableHead,
     TableRow,
     Paper,
-    Avatar,
     Grid,
     Typography,
     TablePagination,
     TableFooter
  } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles'; 
+import Pagination from "@choc-ui/paginator"
+import millify from "millify";
+
+import EcosystemPools from '../../components/Ecosystem/EcosystemPools'
+
+import { useGetPoolsQuery } from '/services/poolsCovalentApi'
 
 const useStyles = makeStyles((theme) => ({
     table: {
-      minWidth: 650,
+      minWidth: 750,
     },
     tableContainer: {
         borderRadius: 15,
         margin: '10px 10px',
-        maxWidth: 950
-    },
-    tableHeaderCell: {
-        fontWeight: 'bold',
-        backgroundColor: theme.palette.primary.dark,
-        color: theme.palette.getContrastText(theme.palette.primary.dark)
-    },
-    avatar: {
-        backgroundColor: theme.palette.primary.light,
-        color: theme.palette.getContrastText(theme.palette.primary.light)
-    },
-    name: {
-        fontWeight: 'bold',
-        color: theme.palette.secondary.dark
+        maxWidth: 1130,
     },
     status: {
         fontWeight: 'bold',
         fontSize: '0.75rem',
-        color: 'white',
-        backgroundColor: 'grey',
         borderRadius: 8,
         padding: '3px 10px',
         display: 'inline-block'
-    }
+    },
   }));
 
-let USERS = [], STATUSES = ['Active', 'Pending', 'Blocked'];
-for(let i=0;i<14;i++) {
-    USERS[i] = {
-        name: faker.name.findName(),
-        email: faker.internet.email(),
-        phone: faker.phone.phoneNumber(),
-        jobTitle: faker.name.jobTitle(),
-        company: faker.company.companyName(),
-        joinDate: faker.date.past().toLocaleDateString('en-US'),
-        status: STATUSES[Math.floor(Math.random() * STATUSES.length)]
-    }
-}
+const Token = () => {
+    const { data, isFetching } = useGetPoolsQuery()
+    const chainItems = data?.data?.items
+    console.log(data);
+    const classes = useStyles();
+    const [page, setPage] = React.useState(0);
+    const [rowsPerPage, setRowsPerPage] = React.useState(5);
 
-function Tables() {
-  const classes = useStyles();
-  const [page, setPage] = React.useState(0);
-  const [rowsPerPage, setRowsPerPage] = React.useState(5);
-
-  const handleChangePage = (event, newPage) => {
+    const handleChangePage = (event, newPage) => {
     setPage(newPage);
-  };
+    };
 
-  const handleChangeRowsPerPage = (event) => {
-    setRowsPerPage(+event.target.value);
-    setPage(0);
-  };
+    const handleChangeRowsPerPage = (event) => {
+        setRowsPerPage(+event.target.value);
+        setPage(0);
+    };
+    
+   if (isFetching) return  <Progress size="xs" isIndeterminate />
+    return (
+     <> <div>
+        
+         <EcosystemPools />
 
-  return (
+        
     <TableContainer component={Paper} className={classes.tableContainer}>
-      <Table className={classes.table} aria-label="simple table">
+      <Table borderColor="green.900" borderWidth={1} className={classes.table} aria-label="simple table" bg={useColorModeValue("white", "gray.800")}>
         <TableHead>
           <TableRow>
-            <TableCell className={classes.tableHeaderCell}>User Info</TableCell>
-            <TableCell className={classes.tableHeaderCell}>Job Info</TableCell>
-            <TableCell className={classes.tableHeaderCell}>Joining Date</TableCell>
-            <TableCell className={classes.tableHeaderCell}>Status</TableCell>
+            <Th><Text color={useColorModeValue("white", "gray.500")}>NAME</Text></Th>
+            <Th><Text color={useColorModeValue("white", "gray.500")}>LIQUIDITY</Text></Th>
+            <Th><Text color={useColorModeValue("white", "gray.500")}>VOLUME(24H)</Text></Th>
+            <Th><Text color={useColorModeValue("white", "gray.500")}>VOLUME(7D)</Text></Th>
+            <Th><Text color={useColorModeValue("white", "gray.500")}>SWAP(24H)</Text></Th>
+            <Th><Text color={useColorModeValue("white", "gray.500")}>FEES(24H)</Text></Th>
+            <Th><Text color={useColorModeValue("white", "gray.500")}>%FEES(YEARLY)</Text></Th>
           </TableRow>
         </TableHead>
         <TableBody>
-          {USERS.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row) => (
-            <TableRow key={row.name}>
-              <TableCell>
-                  <Grid container>
-                      <Grid item lg={2}>
-                          <Avatar alt={row.name} src='.' className={classes.avatar}/>
-                      </Grid>
-                      <Grid item lg={10}>
-                          <Typography className={classes.name}>{row.name}</Typography>
-                          <Typography color="textSecondary" variant="body2">{row.email}</Typography>
-                          <Typography color="textSecondary" variant="body2">{row.phone}</Typography>
-                      </Grid>
-                  </Grid>
-                </TableCell>
-              <TableCell>
-                  <Typography color="primary" variant="subtitle2">{row.jobTitle}</Typography>
-                  <Typography color="textSecondary" variant="body2">{row.company}</Typography>
-                </TableCell>
-              <TableCell>{row.joinDate}</TableCell>
-              <TableCell>
-                  <Typography 
-                    className={classes.status}
-                    style={{
-                        backgroundColor: 
-                        ((row.status === 'Active' && 'green') ||
-                        (row.status === 'Pending' && 'blue') ||
-                        (row.status === 'Blocked' && 'orange'))
-                    }}
-                  >{row.status}</Typography>
-                </TableCell>
-            </TableRow>
+          {chainItems.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((items) => (
+            <Tr key={items.chain_id}>
+              <Td>
+                  <HStack>
+                    <Avatar  name={items.token_0.contract_name} src={items.token_0.logo_url} />
+                    <Avatar name={items.token_1.contract_name} src={items.token_1.logo_url} />
+                    <Text color={useColorModeValue("white", "gray.200")} >{items.token_0.contract_ticker_symbol} –</Text>
+                    <Text color={useColorModeValue("white", "gray.200")} >{items.token_1.contract_ticker_symbol}</Text>                    
+                  </HStack>
+              </Td>
+              <Td color={useColorModeValue("white", "gray.200")}>${(items.total_liquidity_quote)}</Td>
+              <Td color={useColorModeValue("white", "gray.200")}>${(items.volume_24h_quote)}</Td>
+              <Td color={useColorModeValue("white", "gray.200")}>${(items.volume_7d_quote)}</Td>
+              <Td color={useColorModeValue("white", "gray.200")}>{items.swap_count_24h}</Td>
+              <Td color={useColorModeValue("white", "gray.200")}>${(items.fee_24h_quote)}</Td>
+              <Td color="green" color={useColorModeValue("green", "green")}>{(items.annualized_fee*100)}%</Td>
+            </Tr>
           ))}
         </TableBody>
         <TableFooter>
-        <TablePagination
+        <TablePagination  
             rowsPerPageOptions={[5, 10, 15]}
-            component="div"
-            count={USERS.length}
+            count={chainItems.length}
             rowsPerPage={rowsPerPage}
             page={page}
-            onChangePage={handleChangePage}
+            onPageChange={handleChangePage}
             onChangeRowsPerPage={handleChangeRowsPerPage}
+            bg={useColorModeValue("white", "gray.800")}
         />
         </TableFooter>
       </Table>
-    </TableContainer>
-  );
+    </TableContainer>             
+                   
+            
+        
+        </div>
+        </>
+    )
 }
 
-export default Tables;
+export default Token;

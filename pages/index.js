@@ -1,6 +1,7 @@
 // components imports
-import Sidebar from '../components/Sidebar/Siderbar';
+
 import Footers from '../components/Footer/Footers';
+import Siderbar from '../components/Siderbar/Siderbar'
 
 // Chakra imports
 import { Box } from '@chakra-ui/layout'
@@ -8,8 +9,9 @@ import { Box } from '@chakra-ui/layout'
 export default function Home() {
   return (
     <Box>
-      <Sidebar />
+       <Siderbar /> 
       <Footers />
     </Box>
   )
 }
+

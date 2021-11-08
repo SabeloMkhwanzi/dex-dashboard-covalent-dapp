@@ -1,9 +1,9 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
 // Define a service using a base URL and expected endpoints
-const APIKey = ""
-const chainID = 250
-const dexName = 'Spiritswap' 
+const APIKey = "ckey_4e73d56514984838ab3206fbaf4"
+const chainID = 1
+const dexName = 'sushiswap' 
 
 export const tokensApi = createApi({
     reducerPath: 'tokensApi',

@@ -1,17 +1,17 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react'
-import { Box, Text, Image, Link, HStack, useColorModeValue } from '@chakra-ui/react'
+import { Box, Text, Image, Link, HStack, VStack, useColorModeValue, Container } from '@chakra-ui/react'
 
 const Aboutpage = () => {
     return (
         <div>
-           <Box justifyContent="center" textAlign="center" paddingTop="34" paddingBottom="34">
+        <Box px={4}  mx="auto"  >
             <Text textAlign="left"
              fontWeight="bold"
              fontSize="xl"
+             paddingBottom="28"
              >About
              </Text>
-            </Box>
             
              <Box 
                shadow="xl"
@@ -20,6 +20,7 @@ const Aboutpage = () => {
                borderWidth={1}
                borderColor="green.900"
                bg={useColorModeValue("white", "gray.800")}
+               mb="21.5%"
             >
              <Text paddingInlineEnd="3" paddingInlineStart="3" paddingTop="3">DashDEX Dashboard created to help visualize key analytics around Pools, swaps, liquidity, volumes, Lending, borrowing stats and Trading pair positions. With the help of Covalent API fetching data was made simple and possible. </Text>
              <br /><Text paddingInlineEnd="3" paddingInlineStart="3" >This project was created during the <Link href="https://gitcoin.co/issue/covalenthq/covalent-gitcoin-bounties/6/100026821">Hackathon: DeFi & Cross-chain Interoperability Hackathon,</Link></Text><Text paddingInlineEnd="3" paddingInlineStart="3"><Link href="https://www.covalenthq.com/">
@@ -32,7 +33,8 @@ const Aboutpage = () => {
              </HStack> <br />
 
              <Text paddingInlineEnd="3" paddingInlineStart="3" paddingBottom="3">Made with ❤ by Sabelo Mkhwanazi </Text>
-             </Box>   
+             </Box>      
+        </Box>     
         </div>
     )
 }
