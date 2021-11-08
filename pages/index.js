@@ -9,6 +9,10 @@ import { Box } from '@chakra-ui/layout'
 export default function Home() {
   return (
     <Box>
+      <head>
+          <title>DashDEX - DeX Dashboard</title>
+          <meta name="description" content="DEX Dashboard" />
+      </head>
        <Siderbar /> 
       <Footers />
     </Box>
