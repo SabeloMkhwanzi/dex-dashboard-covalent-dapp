@@ -75,16 +75,3 @@ The Covalent API empowers an army of developers, analysts and 'data nerds' to BU
 * Your DEX Analytics Dashboard template must be web hosted and publicly accessible
 * Your DEX Analytics Dashboard template code repo must be publicly accessible
 * The submission must be released under a GPLv3 compatible license
-
-## Judging Criteria
-### Submissions will be judged by Covalent based on their technical merits as well as the likelihood of implementation.
-
-In general, submissions are graded on a 1-5 scale in each of the following categories
-
-* Originality: Does the template incorporate something entirely novel, or at least take a fresh approach to an existing problem?
-* Execution: Is the template usable in its current state? Is the user experience smooth? Does everything appear to work? Is it well designed?
-* Usefulness: Is the template practical? Is it something DEX's would actually use?
-* Learning: Did the individual or team stretch themselves and push the boundaries of learning in this space?
-
-### Winner Announcement Date
-### Wednesday November 10, 2021
