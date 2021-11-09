@@ -39,7 +39,7 @@ const HomeQuick = () => {
                         alt=""
                         mr="12px"
                     />
-                    <Link href={'SiderbarQuick'}>Qiuckswap</Link>
+                    <Link href={'siderbarQuick'}>Qiuckswap</Link>
                     </MenuItem>
                     <MenuItem minH="40px">
                     <Avatar
@@ -47,7 +47,7 @@ const HomeQuick = () => {
                         alt=""
                         mr="12px"
                     />
-                    <Link href={'SiderbarPang'}>Pangolin</Link>
+                    <Link href={'siderbarPang'}>Pangolin</Link>
                     </MenuItem>
                     <MenuItem minH="40px">
                     <Avatar
@@ -55,7 +55,7 @@ const HomeQuick = () => {
                         alt=""
                         mr="12px"
                     />
-                    <Link href={'SiderbarSpooky'}>Spookyswap</Link>
+                    <Link href={'siderbarSpooky'}>Spookyswap</Link>
                     </MenuItem>
                     <MenuItem minH="40px">
                     <Avatar
