@@ -18,10 +18,10 @@ import {
   Avatar,
   HStack,
   Image,
-  Progress, 
+  Progress,
 } from "@chakra-ui/react"
-import { 
-    
+import {
+
     TableBody,
     TableCell,
     TableContainer,
@@ -33,7 +33,7 @@ import {
     TablePagination,
     TableFooter
  } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles'; 
+import { makeStyles } from '@material-ui/core/styles';
 import millify from "millify";
 
 import EcosystemTokensPang from '../../components/Ecosystem/EcosystemTokensPang'
@@ -54,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '0.75rem',
         borderRadius: 8,
         padding: '3px 10px',
-        display: 'inline-block'
+        display: 'center'
     },
   }));
 
@@ -64,7 +64,7 @@ const Token = () => {
     console.log(data);
     const classes = useStyles();
     const [page, setPage] = React.useState(0);
-    const [rowsPerPage, setRowsPerPage] = React.useState(5);
+    const [rowsPerPage, setRowsPerPage] = React.useState(10);
 
     const handleChangePage = (event, newPage) => {
     setPage(newPage);
@@ -74,14 +74,14 @@ const Token = () => {
         setRowsPerPage(+event.target.value);
         setPage(0);
     };
-    
+
    if (isFetching) return  <Progress size="xs" isIndeterminate />
     return (
      <> <div>
-        
+
         <EcosystemTokensPang />
 
-        
+
     <TableContainer component={Paper} className={classes.tableContainer}>
       <Table borderColor="green.900" borderWidth={1} className={classes.table} aria-label="simple table" bg={useColorModeValue("white", "gray.800")}>
         <TableHead>
@@ -107,7 +107,7 @@ const Token = () => {
           ))}
         </TableBody>
         <TableFooter>
-        <TablePagination  
+        <TablePagination
             rowsPerPageOptions={[5, 10, 15]}
             count={chainItems.length}
             rowsPerPage={rowsPerPage}
@@ -118,10 +118,10 @@ const Token = () => {
         />
         </TableFooter>
       </Table>
-    </TableContainer>             
-                   
-            
-        
+    </TableContainer>
+
+
+
         </div>
         </>
     )
