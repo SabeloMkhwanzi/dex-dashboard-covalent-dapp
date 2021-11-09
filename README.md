@@ -1,4 +1,4 @@
-# Hackathon: DeFi & Cross-chain Interoperability Hackathon
+# Hackathon: DeFi & Cross-chain Interoperability Hackathon with Covalent Apis
 ## DEX Analytics Dashboard Template
 
 ### Features
