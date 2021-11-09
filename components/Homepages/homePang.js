@@ -33,7 +33,7 @@ const HomePang = () => {
                     alt=""
                     mr="12px"
                 />
-                <Link href={'SiderbarSushi'}>Sushiswap</Link>
+                <Link href={'siderbarSushi'}>Sushiswap</Link>
                 </MenuItem>
                 <MenuItem minH="40px">
                 <Avatar
@@ -41,7 +41,7 @@ const HomePang = () => {
                     alt=""
                     mr="12px"
                 />
-                <Link href={'SiderbarQuick'}>Quickswap</Link>
+                <Link href={'siderbarQuick'}>Quickswap</Link>
                 </MenuItem>
                 <MenuItem minH="40px">
                 <Avatar
@@ -49,7 +49,7 @@ const HomePang = () => {
                     alt=""
                     mr="12px"
                 />
-                 <Link href={'SiderbarPang'}>Pangolin</Link>
+                 <Link href={'siderbarPang'}>Pangolin</Link>
                 </MenuItem>
                 <MenuItem minH="40px">
                 <Avatar
@@ -57,7 +57,7 @@ const HomePang = () => {
                     alt=""
                     mr="12px"
                 />
-                <Link href={'SiderbarSpooky'}>Spookyswap</Link>
+                <Link href={'siderbarSpooky'}>Spookyswap</Link>
                 </MenuItem>
                 <MenuItem minH="40px">
                 <Avatar
@@ -65,7 +65,7 @@ const HomePang = () => {
                     alt=""
                     mr="12px"
                 />
-                <Link href={'SiderbarSpirit'}>Spiritswap</Link>
+                <Link href={'siderbarSpirit'}>Spiritswap</Link>
                 </MenuItem>
             </MenuList>
             </Menu>
