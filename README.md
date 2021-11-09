@@ -1,10 +1,43 @@
 # Hackathon: DeFi & Cross-chain Interoperability Hackathon
 ## DEX Analytics Dashboard Template
 
-### Prize Bounty
-* Prize Pool: 2,500 USDT
-* Prize pool distributed to a maximum of 3 projects
-* Top projects will be eligible for post-hackathon grants to continue development
+### Features
+ :zap: Fully Responsive\
+ :zap: JavaScript\
+ :zap: Web application framework - React-Next.js\
+ :zap: Api Fetching Data tool - Redux Toolkit\
+ :zap: BackEnd  - Covalent Api\
+ :zap: UI Design Tool - Chakra UI\
+<!--  :zap: Host\Deployment - Vercel -->
+ 
+
+### Lesson learned on this project
+* Deep Understanding working with Covalent Api using different endpoints to fetch data.
+* Redux has been marked as a complicated tool but in this project, I have gain alot of skills in using Redux new improved tool setup to fetch called REDUX TOOLKIT.
+* React-next.js has been my best framework to build React projects in this projects I have gain more skills when it comes page routering. 
+* Using Chackra Ui to build thea cool UI - Coolest React UI framework.  
+
+### App Section
+:arrow_forward: Home Page - Dashboard overview\
+:arrow_forward: Pool - Pools selection with the list of dex\
+:arrow_forward: Token - Tokens selection with the list of dex\
+:arrow_forward: Exchanges - Dashboard overview\
+:arrow_forward: About - About this Project
+
+1 Home Page - Dashboard overview\
+![defi_DexSwap](https://github.com/SabeloMkhwanzi/dex-dashboard-covalent-dapp/blob/main/DEX-Analytics-Template-SabeloMkhwanzi-dash.jpg)
+
+2 Pool - Pools selection with the list of dex\
+![defi_DexSwap](https://github.com/SabeloMkhwanzi/dex-dashboard-covalent-dapp/blob/main/DEX-Analytics-Template-SabeloMkhwanzi.jpg)
+
+3 Token - Tokens selection with the list of dex\
+![defi_DexSwap](https://github.com/SabeloMkhwanzi/dex-dashboard-covalent-dapp/blob/main/DEX-Analytics-Template-SabeloMkhwanzi-tokens1.jpg)
+
+4 Exchanges - Dashboard overview\
+![defi_DexSwap](https://github.com/SabeloMkhwanzi/dex-dashboard-covalent-dapp/blob/main/DEX-Analytics-Template-SabeloMkhwanzi-dex.jpg)
+
+5 About - About this Project
+![defi_DexSwap](https://github.com/SabeloMkhwanzi/dex-dashboard-covalent-dapp/blob/main/DEX-Analytics-Template-SabeloMkhwanzi-about.jpg)
 
 ### Challenge Description
 The Covalent API empowers an army of developers, analysts and 'data nerds' to BUIDL using the richest and most robust data infrastructure for the entire blockchain ecosystem. This challenge is to create a basic open source, multi-chain compatible, DEX Analytics Dashboard Template, powered by the Covalent API.
@@ -42,16 +75,3 @@ The Covalent API empowers an army of developers, analysts and 'data nerds' to BU
 * Your DEX Analytics Dashboard template must be web hosted and publicly accessible
 * Your DEX Analytics Dashboard template code repo must be publicly accessible
 * The submission must be released under a GPLv3 compatible license
-
-## Judging Criteria
-### Submissions will be judged by Covalent based on their technical merits as well as the likelihood of implementation.
-
-In general, submissions are graded on a 1-5 scale in each of the following categories
-
-* Originality: Does the template incorporate something entirely novel, or at least take a fresh approach to an existing problem?
-* Execution: Is the template usable in its current state? Is the user experience smooth? Does everything appear to work? Is it well designed?
-* Usefulness: Is the template practical? Is it something DEX's would actually use?
-* Learning: Did the individual or team stretch themselves and push the boundaries of learning in this space?
-
-### Winner Announcement Date
-### Wednesday November 10, 2021
