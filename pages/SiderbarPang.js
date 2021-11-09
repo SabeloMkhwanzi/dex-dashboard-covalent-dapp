@@ -119,7 +119,7 @@ export default function Swibc() {
       >
         <NavItem color="green.300" icon={AiOutlineDashboard}><Link href={'/'}>OVERVIEW</Link></NavItem>
         <NavItem color="green.300" icon={MdGeneratingTokens}><Link href={'pool'}>POOLS</Link></NavItem>
-        <NavItem color="green.300" icon={GiToken}><Link href={'token'}>TOKENS</Link></NavItem>
+        <NavItem color="green.300" icon={GiToken}><Link href={'tokenQuick'}>TOKENS</Link></NavItem>
         <NavItem color="green.300" icon={BsCurrencyExchange}><Link href={'exchanges'}>EXCHANGES</Link></NavItem>
         <NavItem color="green.300" icon={FcAbout}><Link href={'about'}>ABOUT</Link></NavItem>
       </Flex>
