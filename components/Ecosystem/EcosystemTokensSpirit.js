@@ -7,7 +7,7 @@ import { chakra, HStack, Badge, Box, useColorModeValue, SimpleGrid, Text, Progre
 
 import { useGetEcosystemQuery } from "../../services/ecosystemCovalentApiSpirit"
 
-import DexButton from '../../components/Button/DexButton'
+
 
 const Ecosystem = () => {
   const { data, isFetching } = useGetEcosystemQuery();  

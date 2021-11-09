@@ -35,7 +35,7 @@ import { FaMoon, FaSun } from "react-icons/fa";
 
 //import { Logo } from "@choc-ui/logo";
 
-import HomePang from "../components/HomePages/homePang";
+import HomePang from "../components/homePages/HomePang";
 import Footer from "../components/Footer/Footers"
 import { Dashboard } from "@material-ui/icons";
 
