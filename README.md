@@ -24,6 +24,21 @@
 :arrow_forward: Exchanges - Dashboard overview\
 :arrow_forward: About - About this Project
 
+:arrow_forward: Home Page - Dashboard overview\
+![defi_DexSwap](https://github.com/SabeloMkhwanzi/defi_DexSwap/blob/main/DexSwap_project.jpg)
+
+:arrow_forward: Pool - Pools selection with the list of dex\
+![defi_DexSwap](https://github.com/SabeloMkhwanzi/defi_DexSwap/blob/main/DexSwap_project.jpg)
+
+:arrow_forward: Token - Tokens selection with the list of dex\
+![defi_DexSwap](https://github.com/SabeloMkhwanzi/defi_DexSwap/blob/main/DexSwap_project.jpg)
+
+:arrow_forward: Exchanges - Dashboard overview\
+![defi_DexSwap](https://github.com/SabeloMkhwanzi/defi_DexSwap/blob/main/DexSwap_project.jpg)
+
+:arrow_forward: About - About this Project
+![defi_DexSwap](https://github.com/SabeloMkhwanzi/defi_DexSwap/blob/main/DexSwap_project.jpg)
+
 ### Challenge Description
 The Covalent API empowers an army of developers, analysts and 'data nerds' to BUIDL using the richest and most robust data infrastructure for the entire blockchain ecosystem. This challenge is to create a basic open source, multi-chain compatible, DEX Analytics Dashboard Template, powered by the Covalent API.
 
