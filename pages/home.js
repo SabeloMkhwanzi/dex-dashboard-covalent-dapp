@@ -63,7 +63,7 @@ const Home = () => {
                     alt=""
                     mr="12px"
                 />
-                <Link href={'SiderbarSpirit'}>Spiritswap</Link>
+                <Link href={'siderbarSpirit'}>Spiritswap</Link>
                 </MenuItem>
             </MenuList>
             </Menu>
