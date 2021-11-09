@@ -25,7 +25,7 @@
 :arrow_forward: About - About this Project
 
 1 Home Page - Dashboard overview\
-![defi_DexSwap](https://github.com/SabeloMkhwanzi/dex-dashboard-covalent-dapp/blob/main/DEX-Analytics-Template-SabeloMkhwanzi-dash.jpg)
+![defi_DexSwap](https://github.com/SabeloMkhwanzi/dex-dashboard-covalent-dapp/blob/main/DEX-Analytics-Template-SabeloMkhwanzi-dashboard1.jpg)
 
 2 Pool - Pools selection with the list of dex\
 ![defi_DexSwap](https://github.com/SabeloMkhwanzi/dex-dashboard-covalent-dapp/blob/main/DEX-Analytics-Template-SabeloMkhwanzi.jpg)
