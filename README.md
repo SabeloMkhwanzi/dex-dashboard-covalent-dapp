@@ -75,3 +75,11 @@ The Covalent API empowers an army of developers, analysts and 'data nerds' to BU
 * Your DEX Analytics Dashboard template must be web hosted and publicly accessible
 * Your DEX Analytics Dashboard template code repo must be publicly accessible
 * The submission must be released under a GPLv3 compatible license
+
+```
+   $ git clone gh repo clone SabeloMkhwanzi/dex-dashboard-covalent-dapp
+   $ cd dex-dashboard-covalent-dapp
+   $ npm install
+   $ npm run dev
+   ```
+
