@@ -24,19 +24,19 @@
 :arrow_forward: Exchanges - Dashboard overview\
 :arrow_forward: About - About this Project
 
-:arrow_forward: Home Page - Dashboard overview\
+1 Home Page - Dashboard overview\
 ![defi_DexSwap](https://github.com/SabeloMkhwanzi/dex-dashboard-covalent-dapp/blob/main/DEX-Analytics-Template-SabeloMkhwanzi-dash.jpg)
 
-:arrow_forward: Pool - Pools selection with the list of dex\
+2 Pool - Pools selection with the list of dex\
 ![defi_DexSwap](https://github.com/SabeloMkhwanzi/dex-dashboard-covalent-dapp/blob/main/DEX-Analytics-Template-SabeloMkhwanzi.jpg)
 
-:arrow_forward: Token - Tokens selection with the list of dex\
+3 Token - Tokens selection with the list of dex\
 ![defi_DexSwap](https://github.com/SabeloMkhwanzi/dex-dashboard-covalent-dapp/blob/main/DEX-Analytics-Template-SabeloMkhwanzi-tokens1.jpg)
 
-:arrow_forward: Exchanges - Dashboard overview\
+4 Exchanges - Dashboard overview\
 ![defi_DexSwap](https://github.com/SabeloMkhwanzi/dex-dashboard-covalent-dapp/blob/main/DEX-Analytics-Template-SabeloMkhwanzi-dex.jpg)
 
-:arrow_forward: About - About this Project
+5 About - About this Project
 ![defi_DexSwap](https://github.com/SabeloMkhwanzi/dex-dashboard-covalent-dapp/blob/main/DEX-Analytics-Template-SabeloMkhwanzi-about.jpg)
 
 ### Challenge Description
