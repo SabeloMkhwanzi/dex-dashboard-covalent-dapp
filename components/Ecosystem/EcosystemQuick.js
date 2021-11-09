@@ -170,7 +170,40 @@ const Ecosystem = () => {
       </Box>
 
       </SimpleGrid>
-      ))}
+       ))}
+           <Box paddingTop={12}>
+            <SimpleGrid columns={[1, null, 2]} spacing={2} >
+          <Box
+            w="full" maxW="4xl" mx="auto" px={2} py={2}
+            paddingTop={4}
+            shadow="xl"
+            rounded="md "
+            borderRadius="lg"
+            borderWidth={1}
+            borderColor="green.900"   
+            as="iframe"
+            height="600"
+            src="https://www.tokenterminal.com/terminal/projects/quickswap/embed/revenue" 
+            title="Token Terminal"
+            bg={useColorModeValue("white", "gray.800")}
+            />
+
+             <Box
+            w="full" maxW="4xl" mx="auto" px={2} py={2}
+            paddingTop={4}
+            shadow="xl"
+            rounded="md "
+            borderRadius="lg"
+            borderWidth={1}
+            borderColor="green.900"   
+            as="iframe"
+            height="600"
+             src="https://www.tokenterminal.com/terminal/projects/quickswap/embed/composition" 
+            title="Token Terminal"
+            bg={useColorModeValue("white", "gray.800")}
+          />
+          </SimpleGrid>
+          </Box>
      </Box>
 
   </div>
