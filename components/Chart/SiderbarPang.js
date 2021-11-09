@@ -35,7 +35,7 @@ import { FaMoon, FaSun } from "react-icons/fa";
 
 //import { Logo } from "@choc-ui/logo";
 
-import HomeQuick from "../components/HomePages/homeQuick";
+import HomePang from "../components/HomePages/homePang";
 import Footer from "../components/Footer/Footers"
 import { Dashboard } from "@material-ui/icons";
 
@@ -196,7 +196,7 @@ export default function Swibc() {
         {/* Content below  */}      
         <Box bg={useColorModeValue("white", "gray.900")} as="main" p="4">
           
-         <HomeQuick /> 
+         <HomePang /> 
            
         </Box>
       </Box>

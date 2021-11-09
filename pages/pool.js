@@ -119,7 +119,7 @@ export default function Swibc() {
         aria-label="Main Navigation"
       >
         <NavItem color="green.300" icon={AiOutlineDashboard}><Link href={'/'}>DASHBOARD</Link></NavItem>
-        <NavItem color="green.300" icon={MdGeneratingTokens}><Link href={'pool'}>POOLS</Link></NavItem>
+        <NavItem color="green.300" icon={MdGeneratingTokens}><Link href={'poolQuick'}>POOLS</Link></NavItem>
         <NavItem color="green.300" icon={GiToken}><Link href={'token'}>TOKENS</Link></NavItem>
         <NavItem color="green.300" icon={BsCurrencyExchange}><Link href={'exchanges'}>EXCHANGES</Link></NavItem>
         <NavItem color="green.300" icon={FcAbout}><Link href={'about'}>ABOUT</Link></NavItem>
