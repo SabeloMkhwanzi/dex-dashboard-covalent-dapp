@@ -3,7 +3,7 @@ import React from 'react'
 import { Box, Text, Button, Menu, MenuButton, MenuList, MenuItem, Avatar, Link} from '@chakra-ui/react'
 // Components import
 import Health from '../Health/Health' 
-import Ecosystem from '../Ecosystem/EcosystemPang'
+import Ecosystem from '../Ecosystem/ecosystemPang'
 
 
 const HomePang = () => {
