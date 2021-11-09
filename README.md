@@ -25,7 +25,7 @@
 :arrow_forward: About - About this Project
 
 1 Home Page - Dashboard overview\
-![defi_DexSwap](https://github.com/SabeloMkhwanzi/dex-dashboard-covalent-dapp/blob/main/DEX-Analytics-Template-SabeloMkhwanzi-dash.jpg)
+![defi_DexSwap](https://github.com/SabeloMkhwanzi/dex-dashboard-covalent-dapp/blob/main/DEX-Analytics-Template-SabeloMkhwanzi-dashboard1.jpg)
 
 2 Pool - Pools selection with the list of dex\
 ![defi_DexSwap](https://github.com/SabeloMkhwanzi/dex-dashboard-covalent-dapp/blob/main/DEX-Analytics-Template-SabeloMkhwanzi.jpg)
@@ -75,3 +75,11 @@ The Covalent API empowers an army of developers, analysts and 'data nerds' to BU
 * Your DEX Analytics Dashboard template must be web hosted and publicly accessible
 * Your DEX Analytics Dashboard template code repo must be publicly accessible
 * The submission must be released under a GPLv3 compatible license
+
+```
+   $ git clone gh repo clone SabeloMkhwanzi/dex-dashboard-covalent-dapp
+   $ cd dex-dashboard-covalent-dapp
+   $ npm install
+   $ npm run dev
+   ```
+
