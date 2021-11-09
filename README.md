@@ -31,7 +31,7 @@
 ![defi_DexSwap](https://github.com/SabeloMkhwanzi/defi_DexSwap/blob/main/DexSwap_project.jpg)
 
 :arrow_forward: Token - Tokens selection with the list of dex\
-![defi_DexSwap](https://github.com/SabeloMkhwanzi/defi_DexSwap/blob/main/DexSwap_project.jpg)
+![defi_DexSwap](https://github.com/SabeloMkhwanzi/dex-dashboard-covalent-dapp/blob/main/DEX-Analytics-Template-SabeloMkhwanzi-tokens1.jpg)
 
 :arrow_forward: Exchanges - Dashboard overview\
 ![defi_DexSwap](https://github.com/SabeloMkhwanzi/dex-dashboard-covalent-dapp/blob/main/DEX-Analytics-Template-SabeloMkhwanzi-dex.jpg)
