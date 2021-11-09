@@ -31,7 +31,7 @@ const HomeQuick = () => {
                         alt=""
                         mr="12px"
                     />
-                    <Link href={'SiderbarSushi'}>Sushiswap</Link>
+                    <Link href={'siderbarSushi'}>Sushiswap</Link>
                     </MenuItem>
                     <MenuItem minH="40px">
                     <Avatar
