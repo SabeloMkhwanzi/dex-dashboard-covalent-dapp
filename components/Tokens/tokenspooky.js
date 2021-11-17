@@ -37,7 +37,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Pagination from "@choc-ui/paginator"
 import millify from "millify";
 
-import Ecosystemtokensspooky from '../Ecosystem/Ecosystemtokensspooky'
+import Ecosystemtokensspooky from '../Ecosystem/ecosystemtokensspooky'
 
 import { useGetTokensQuery } from '/services/tokensCovalentApiSpooky'
 

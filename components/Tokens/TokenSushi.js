@@ -37,7 +37,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Pagination from "@choc-ui/paginator"
 import millify from "millify";
 
-import Ecosystemtokenssushi from '../Ecosystem/Ecosystemtokenssushi'
+import Ecosystemtokenssushi from '../Ecosystem/ecosystemtokenssushi'
 
 import { useGetTokensQuery } from '/services/tokensCovalentApi'
 
