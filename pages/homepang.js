@@ -30,15 +30,14 @@ import { GiToken } from "react-icons/gi"
 import { FcAbout } from "react-icons/fc"
 import { FiMenu, FiSearch } from "react-icons/fi";
 import { HiCode, HiCollection } from "react-icons/hi";
-import { Dashboard } from "@material-ui/icons";
 import { MdHome, MdKeyboardArrowRight, MdGeneratingTokens, MdOutlineGames } from "react-icons/md";
 import { FaMoon, FaSun } from "react-icons/fa";
 
 //import { Logo } from "@choc-ui/logo";
 
-import Poolsushi from "../components/Pools/poolsushi";
-import Footers from "../components/Footer/Footers";
-
+import Homepang from "../components/Homepages/homepang";
+import Footer from "../components/Footer/Footers"
+import { Dashboard } from "@material-ui/icons";
 
 export default function Swibc() {
   const sidebar = useDisclosure();
@@ -118,7 +117,7 @@ export default function Swibc() {
         color="gray.600"
         aria-label="Main Navigation"
       >
-        <NavItem color="green.300" icon={AiOutlineDashboard}><Link href={'/'}>DASHBOARD</Link></NavItem>
+        <NavItem color="green.300" icon={AiOutlineDashboard}><Link href={'/'}>OVERVIEW</Link></NavItem>
         <NavItem color="green.300" icon={MdGeneratingTokens}><Link href={'poolsushi'}>POOLS</Link></NavItem>
         <NavItem color="green.300" icon={GiToken}><Link href={'tokensushi'}>TOKENS</Link></NavItem>
         <NavItem color="green.300" icon={BsCurrencyExchange}><Link href={'exchanges'}>EXCHANGES</Link></NavItem>
@@ -196,11 +195,12 @@ export default function Swibc() {
         
         {/* Content below  */}      
         <Box bg={useColorModeValue("white", "gray.900")} as="main" p="4">
-          <Poolsushi />
-         
+          
+         <Homepang /> 
+           
         </Box>
       </Box>
-      <Footers />
+      <Footer />
     </Box>
   );
 }

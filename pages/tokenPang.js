@@ -36,7 +36,7 @@ import { FaMoon, FaSun } from "react-icons/fa";
 
 //import { Logo } from "@choc-ui/logo";
 
-import TokenPang from "../components/Tokens/TokenPang";
+import Tokenpang from "../components/Tokens/tokenpang";
 import Footers from "../components/Footer/Footers";
 
 
@@ -119,8 +119,8 @@ export default function Swibc() {
         aria-label="Main Navigation"
       >
         <NavItem color="green.300" icon={AiOutlineDashboard}><Link href={'/'}>OVERVIEW</Link></NavItem>
-        <NavItem color="green.300" icon={MdGeneratingTokens}><Link href={'pool'}>POOLS</Link></NavItem>
-        <NavItem color="green.300" icon={GiToken}><Link href={'token'}>TOKENS</Link></NavItem>
+         <NavItem color="green.300" icon={MdGeneratingTokens}><Link href={'poolsushi'}>POOLS</Link></NavItem>
+        <NavItem color="green.300" icon={GiToken}><Link href={'tokensushi'}>TOKENS</Link></NavItem>
         <NavItem color="green.300" icon={BsCurrencyExchange}><Link href={'exchanges'}>EXCHANGES</Link></NavItem>
         <NavItem color="green.300" icon={FcAbout}><Link href={'about'}>ABOUT</Link></NavItem>
       </Flex>
@@ -196,7 +196,7 @@ export default function Swibc() {
         
         {/* Content below  */}      
         <Box bg={useColorModeValue("white", "gray.900")} as="main" p="4">
-         <TokenPang />
+         <Tokenpang />
          
         </Box>
       </Box>

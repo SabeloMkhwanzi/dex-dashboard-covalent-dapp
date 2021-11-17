@@ -2,7 +2,7 @@ import React from 'react'
 // Chakra import
 import { Box, Text, Button, Link, Avatar, Select, Menu, MenuButton, MenuList, MenuItem, } from '@chakra-ui/react'
 // Components import
-import Health from '../components/Health/Health' 
+import Health from '../components/Health/health' 
 import Ecosystem from '../components/Ecosystem/ecosystem'
 
 const Home = () => {
@@ -31,7 +31,7 @@ const Home = () => {
                     alt=""
                     mr="12px"
                 />
-                <Link href={'siderbarSushi'}>Sushiswap</Link>
+                <Link href={'homesushi'}>Sushiswap</Link>
                 </MenuItem>
                 <MenuItem minH="40px">
                 <Avatar
@@ -39,7 +39,7 @@ const Home = () => {
                     alt=""
                     mr="12px"
                 />
-                <Link href={'siderbarQuick'}>Quickswap</Link>
+                <Link href={'homequick'}>Quickswap</Link>
                 </MenuItem>
                 <MenuItem minH="40px">
                 <Avatar
@@ -47,7 +47,7 @@ const Home = () => {
                     alt=""
                     mr="12px"
                 />
-                 <Link href={'siderbarPang'}>Pangolin</Link>
+                 <Link href={'homepang'}>Pangolin</Link>
                 </MenuItem>
                 <MenuItem minH="40px">
                 <Avatar
@@ -55,7 +55,7 @@ const Home = () => {
                     alt=""
                     mr="12px"
                 />
-                <Link href={'siderbarSpooky'}>Spookyswap</Link>
+                <Link href={'homespooky'}>Spookyswap</Link>
                 </MenuItem>
                 <MenuItem minH="40px">
                 <Avatar
@@ -63,7 +63,7 @@ const Home = () => {
                     alt=""
                     mr="12px"
                 />
-                <Link href={'siderbarSpirit'}>Spiritswap</Link>
+                <Link href={'homespirit'}>Spiritswap</Link>
                 </MenuItem>
             </MenuList>
             </Menu>

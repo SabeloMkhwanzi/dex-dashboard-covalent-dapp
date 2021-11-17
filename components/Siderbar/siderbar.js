@@ -35,8 +35,7 @@ import { FaMoon, FaSun } from "react-icons/fa";
 
 //import { Logo } from "@choc-ui/logo";
 
-import HomePang from "../components/HomePages/homePang";
-import Footer from "../components/Footer/Footers"
+import Home from "../../pages/home";
 import { Dashboard } from "@material-ui/icons";
 
 export default function Swibc() {
@@ -44,12 +43,12 @@ export default function Swibc() {
   const integrations = useDisclosure();
   const { toggleColorMode: toggleMode } = useColorMode();
   const SwitchIcon = useColorModeValue(FaMoon, FaSun);
-  const text = useColorModeValue("dark", "light");  
+  const text = useColorModeValue("dark", "light");
 
   const NavItem = (props) => {
     const { icon, children, ...rest } = props;
     return (
-        
+
       <Flex
         align="center"
         px="4"
@@ -118,8 +117,8 @@ export default function Swibc() {
         aria-label="Main Navigation"
       >
         <NavItem color="green.300" icon={AiOutlineDashboard}><Link href={'/'}>OVERVIEW</Link></NavItem>
-        <NavItem color="green.300" icon={MdGeneratingTokens}><Link href={'pool'}>POOLS</Link></NavItem>
-        <NavItem color="green.300" icon={GiToken}><Link href={'tokenQuick'}>TOKENS</Link></NavItem>
+        <NavItem color="green.300" icon={MdGeneratingTokens}><Link href={'poolsushi'}>POOLS</Link></NavItem>
+        <NavItem color="green.300" icon={GiToken}><Link href={'tokensushi'}>TOKENS</Link></NavItem>
         <NavItem color="green.300" icon={BsCurrencyExchange}><Link href={'exchanges'}>EXCHANGES</Link></NavItem>
         <NavItem color="green.300" icon={FcAbout}><Link href={'about'}>ABOUT</Link></NavItem>
       </Flex>
@@ -167,7 +166,7 @@ export default function Swibc() {
             <InputLeftElement color="gray.500" children={<FiSearch />} />
             <Input borderColor="green.900" borderRadius="full" placeholder="Search..." />
           </InputGroup>
-            
+
          <Box
           as="iframe"
           src="https://coinhippo.io?widget=price-marquee&theme=?"
@@ -175,10 +174,10 @@ export default function Swibc() {
           frameBorder="0"
           width="100%"
           height="35"
-          />      
+          />
           <Flex align="center">
-          
-              
+
+
             <IconButton
               borderRadius="lg"
               borderWidth={3}
@@ -192,15 +191,13 @@ export default function Swibc() {
             />
           </Flex>
         </Flex>
-        
-        {/* Content below  */}      
+
+        {/* Content below  */}
         <Box bg={useColorModeValue("white", "gray.900")} as="main" p="4">
-          
-         <HomePang /> 
-           
+
+         <Home />
         </Box>
       </Box>
-      <Footer />
     </Box>
   );
 }
