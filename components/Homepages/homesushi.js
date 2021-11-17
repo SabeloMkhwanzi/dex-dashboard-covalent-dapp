@@ -32,11 +32,7 @@ const HomeSushi = () => {
                     alt=""
                     mr="12px"
                 />
-<<<<<<< HEAD
                 <Link href={'homesushi'}>Sushiswap</Link>
-=======
-                <Link href={'siderbarSushi'}>Sushiswap</Link>
->>>>>>> fc9bef22e83f52752ef42b0c8411e2835b61688e
                 </MenuItem>
                 <MenuItem minH="40px">
                 <Avatar
@@ -44,11 +40,7 @@ const HomeSushi = () => {
                     alt=""
                     mr="12px"
                 />
-<<<<<<< HEAD
                 <Link href={'homequick'}>Quickswap</Link>
-=======
-                <Link href={'siderbarQuick'}>Quickswap</Link>
->>>>>>> fc9bef22e83f52752ef42b0c8411e2835b61688e
                 </MenuItem>
                 <MenuItem minH="40px">
                 <Avatar
@@ -56,11 +48,7 @@ const HomeSushi = () => {
                     alt=""
                     mr="12px"
                 />
-<<<<<<< HEAD
                  <Link href={'homepang'}>Pangolin</Link>
-=======
-                 <Link href={'siderbarPang'}>Pangolin</Link>
->>>>>>> fc9bef22e83f52752ef42b0c8411e2835b61688e
                 </MenuItem>
                 <MenuItem minH="40px">
                 <Avatar
@@ -68,11 +56,7 @@ const HomeSushi = () => {
                     alt=""
                     mr="12px"
                 />
-<<<<<<< HEAD
                 <Link href={'homespooky'}>Spookyswap</Link>
-=======
-                <Link href={'siderbarSpooky'}>Spookyswap</Link>
->>>>>>> fc9bef22e83f52752ef42b0c8411e2835b61688e
                 </MenuItem>
                 <MenuItem minH="40px">
                 <Avatar
@@ -80,11 +64,7 @@ const HomeSushi = () => {
                     alt=""
                     mr="12px"
                 />
-<<<<<<< HEAD
                 <Link href={'homespirit'}>Spiritswap</Link>
-=======
-                <Link href={'siderbarSpirit'}>Spiritswap</Link>
->>>>>>> fc9bef22e83f52752ef42b0c8411e2835b61688e
                 </MenuItem>
             </MenuList>
             </Menu>
