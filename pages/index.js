@@ -1,7 +1,7 @@
 // components imports
 
 import Footers from '../components/Footer/Footers';
-import Siderbar from '../components/Siderbar/Siderbar'
+import Siderbar from '../components/Siderbar/siderbar'
 
 // Chakra imports
 import { Box } from '@chakra-ui/layout'
