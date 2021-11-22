@@ -7,7 +7,7 @@
  :zap: Web application framework - React-Next.js\
  :zap: Api Fetching Data tool - Redux Toolkit\
  :zap: BackEnd  - Covalent Api\
- :zap: UI Design Tool - Chakra UI\
+ :zap: UI Design Tool - Chakra UI      
 <!--  :zap: Host\Deployment - Vercel -->
  
 
