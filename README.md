@@ -1,5 +1,5 @@
 # Hackathon: DeFi & Cross-chain Interoperability Hackathon with Covalent Apis
-## DEX Analytics Dashboard Template
+## DEX Analytics Dashboard Template : [This project was the top winner in the dex category!](https://www.covalenthq.com/blog/gitcoin-winners-announcement/)
 
 ### Features
  :zap: Fully Responsive\
@@ -7,7 +7,7 @@
  :zap: Web application framework - React-Next.js\
  :zap: Api Fetching Data tool - Redux Toolkit\
  :zap: BackEnd  - Covalent Api\
- :zap: UI Design Tool - Chakra UI\
+ :zap: UI Design Tool - Chakra UI      
 <!--  :zap: Host\Deployment - Vercel -->
  
 
