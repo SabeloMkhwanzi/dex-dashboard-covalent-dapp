@@ -26,7 +26,7 @@ const APIKey = process.env.NEXT_PUBLIC_COVALENT_APIKEY;
 const chainID = 137;
 const dexName = "quickswap";
 
-const Ecosystem = () => {
+const EcosystemPoolsQuick = () => {
   // used React-Query to fetch Covalent API
   const { data, error, isFetching } = useQuery(["ecosystem5"], async () => {
     const res = await fetch(
@@ -268,4 +268,4 @@ const Ecosystem = () => {
   );
 };
 
-export default Ecosystem;
+export default EcosystemPoolsQuick;

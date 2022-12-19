@@ -13,7 +13,7 @@ import {
 } from "@chakra-ui/react";
 // Components import
 import Health from "../Health";
-import EcosystemQuick from "../Ecosystem";
+import EcosystemQuick from "../Ecosystem/EcosystemQuick";
 
 const HomeQuick = () => {
   return (

@@ -12,7 +12,7 @@ import {
   Link,
 } from "@chakra-ui/react";
 // Components import
-import Health from "../Health/health";
+import Health from "../Health";
 import EcosystemSpooky from "../Ecosystem/EcosystemSpooky";
 
 const Home = () => {

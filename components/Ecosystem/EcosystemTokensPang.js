@@ -27,7 +27,7 @@ const APIKey = process.env.NEXT_PUBLIC_COVALENT_APIKEY;
 const chainID = 43114;
 const dexName = "pangolin";
 
-const Ecosystem = () => {
+const EcosystemTokensPang = () => {
   // used React-Query to fetch Covalent API
   const { data, error, isFetching } = useQuery(["ecosystem13"], async () => {
     const res = await fetch(
@@ -267,4 +267,4 @@ const Ecosystem = () => {
   );
 };
 
-export default Ecosystem;
+export default EcosystemTokensPang;
