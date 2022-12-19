@@ -40,7 +40,7 @@ import { FaMoon, FaSun } from "react-icons/fa";
 
 //import { Logo } from "@choc-ui/logo";
 
-import HomeSushi from "../components/Homepages/homeSushi";
+import HomeSushiPage from "../components/Homepages/homeSushiPage";
 import Footer from "../components/Footer/Footers";
 
 import { Dashboard } from "@material-ui/icons";
@@ -212,7 +212,7 @@ export default function Swibc() {
 
         {/* Content below  */}
         <Box bg={useColorModeValue("white", "gray.900")} as="main" p="4">
-          <HomeSushi />
+          <HomeSushiPage />
         </Box>
         <Footer />
       </Box>

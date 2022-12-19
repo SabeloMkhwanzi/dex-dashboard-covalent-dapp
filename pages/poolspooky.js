@@ -41,7 +41,7 @@ import { FaMoon, FaSun } from "react-icons/fa";
 
 //import { Logo } from "@choc-ui/logo";
 
-import PoolSpooky from "../components/Pools/poolSpooky";
+import PoolSpookyTable from "../components/Pools/PoolSpookyTable";
 import Footers from "../components/Footer/Footers";
 
 export default function Swibc() {
@@ -216,7 +216,7 @@ export default function Swibc() {
           as="main"
           p="4"
         >
-          <PoolSpooky />
+          <PoolSpookyTable />
         </Box>
       </Box>
       <Footers />

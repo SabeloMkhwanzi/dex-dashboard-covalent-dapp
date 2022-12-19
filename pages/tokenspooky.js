@@ -41,7 +41,7 @@ import { FaMoon, FaSun } from "react-icons/fa";
 
 //import { Logo } from "@choc-ui/logo";
 
-import TokenSpooky from "../components/Tokens/TokenSpooky";
+import TokenSpookyTable from "../components/Tokens/TokenSpookyTable";
 import Footers from "../components/Footer/Footers";
 
 export default function Swibc() {
@@ -211,7 +211,7 @@ export default function Swibc() {
 
         {/* Content below  */}
         <Box bg={useColorModeValue("white", "gray.900")} as="main" p="4">
-          <TokenSpooky />
+          <TokenSpookyTable />
         </Box>
       </Box>
       <Footers />

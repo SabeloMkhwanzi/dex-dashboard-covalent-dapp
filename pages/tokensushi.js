@@ -39,7 +39,7 @@ import {
 } from "react-icons/md";
 import { FaMoon, FaSun } from "react-icons/fa";
 
-import TokenSushi from "../components/Tokens/TokenSushi";
+import TokenSushiTable from "../components/Tokens/TokenSushiTable";
 import Footers from "../components/Footer/Footers";
 
 export default function Swibc() {
@@ -209,7 +209,7 @@ export default function Swibc() {
 
         {/* Content below  */}
         <Box bg={useColorModeValue("white", "gray.900")} as="main" p="4">
-          <TokenSushi />
+          <TokenSushiTable />
         </Box>
       </Box>
       <Footers />

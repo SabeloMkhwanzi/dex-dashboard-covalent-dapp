@@ -38,7 +38,7 @@ import {
 } from "react-icons/md";
 import { FaMoon, FaSun } from "react-icons/fa";
 
-import HomePang from "../components/Homepages/homePang";
+import HomePangPage from "../components/Homepages/homePangPage";
 import Footer from "../components/Footer/Footers";
 
 export default function Swibc() {
@@ -208,7 +208,7 @@ export default function Swibc() {
 
         {/* Content below  */}
         <Box bg={useColorModeValue("white", "gray.900")} as="main" p="4">
-          <HomePang />
+          <HomePangPage />
         </Box>
       </Box>
       <Footer />

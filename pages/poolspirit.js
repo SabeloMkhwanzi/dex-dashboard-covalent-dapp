@@ -41,7 +41,7 @@ import { FaMoon, FaSun } from "react-icons/fa";
 
 //import { Logo } from "@choc-ui/logo";
 
-import PoolSpirit from "../components/Pools/poolSpirit";
+import PoolSpiritTable from "../components/Pools/PoolSpiritTable";
 import Footers from "../components/Footer/Footers";
 
 export default function Swibc() {
@@ -211,7 +211,7 @@ export default function Swibc() {
 
         {/* Content below  */}
         <Box bg={useColorModeValue("white", "gray.900")} as="main" p="4">
-          <PoolSpirit />
+          <PoolSpiritTable />
         </Box>
       </Box>
       <Footers />

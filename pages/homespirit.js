@@ -40,7 +40,7 @@ import { FaMoon, FaSun } from "react-icons/fa";
 
 //import { Logo } from "@choc-ui/logo";
 
-import HomeSpirit from "../components/Homepages/homeSpirit";
+import HomeSpiritPage from "../components/Homepages/homeSpiritPage";
 import Footer from "../components/Footer/Footers";
 
 export default function Swibc() {
@@ -210,7 +210,7 @@ export default function Swibc() {
 
         {/* Content below  */}
         <Box bg={useColorModeValue("white", "gray.900")} as="main" p="4">
-          <HomeSpirit />
+          <HomeSpiritPage />
         </Box>
         <Footer />
       </Box>
