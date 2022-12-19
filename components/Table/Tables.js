@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-duplicate-props */
 /* eslint-disable react-hooks/rules-of-hooks */
 import React from "react";
 import {
@@ -34,7 +35,7 @@ import {
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
-import Ecosystempoolspang from "../Ecosystem/ecosystempoolspang";
+import Ecosystempools from "../Ecosystem/ecosystempools";
 
 const useStyles = makeStyles((theme) => ({
   table: {
@@ -56,18 +57,17 @@ const useStyles = makeStyles((theme) => ({
 
 import { useQuery } from "react-query";
 //COVALENT API Key
-const APIKey = process.env.NEXT_PUBLIC_COVALENT_APIKEY;
+const APIKey = process.env.NEXT_PUBLIC_COVALENTKEY;
+const chainID = 250;
+const dexName = "spookyswap";
 
-const chainID = 1;
-const dexName = "sushiswap";
-
-const Pool = () => {
+const Token = () => {
   const classes = useStyles();
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
 
   // used React-Query to fetch Covalent API
-  const { data, error, isFetching } = useQuery(["ecosystem20"], async () => {
+  const { data, error, isFetching } = useQuery(["ecosystem23"], async () => {
     const res = await fetch(
       `https://api.covalenthq.com/v1/${chainID}/xy=k/${dexName}/pools/?key=${APIKey}`
     );
@@ -93,11 +93,12 @@ const Pool = () => {
     setPage(0);
   };
 
+  if (isFetching) return <Progress size="xs" isIndeterminate />;
   return (
     <>
       {" "}
       <div>
-        <Ecosystempoolspang />
+        <Ecosystempools />
 
         <TableContainer component={Paper} className={classes.tableContainer}>
           <Table
@@ -208,4 +209,4 @@ const Pool = () => {
   );
 };
 
-export default Pool;
+export default Token;

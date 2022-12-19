@@ -58,8 +58,8 @@ import { useQuery } from "react-query";
 //COVALENT API Key
 const APIKey = process.env.NEXT_PUBLIC_COVALENT_APIKEY;
 
-const chainID = 1;
-const dexName = "sushiswap";
+const chainID = 43114;
+const dexName = "pangolin";
 
 const Pool = () => {
   const classes = useStyles();

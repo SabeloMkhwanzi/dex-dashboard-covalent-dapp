@@ -34,7 +34,7 @@ import {
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
-import Ecosystempoolspang from "../Ecosystem/ecosystempoolspang";
+import Ecosystempoolsspooky from "../Ecosystem/ecosystempoolsspooky";
 
 const useStyles = makeStyles((theme) => ({
   table: {
@@ -53,13 +53,11 @@ const useStyles = makeStyles((theme) => ({
     display: "inline-block",
   },
 }));
-
 import { useQuery } from "react-query";
 //COVALENT API Key
 const APIKey = process.env.NEXT_PUBLIC_COVALENT_APIKEY;
-
-const chainID = 1;
-const dexName = "sushiswap";
+const chainID = 250;
+const dexName = "spookyswap";
 
 const Pool = () => {
   const classes = useStyles();
@@ -67,7 +65,7 @@ const Pool = () => {
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
 
   // used React-Query to fetch Covalent API
-  const { data, error, isFetching } = useQuery(["ecosystem20"], async () => {
+  const { data, error, isFetching } = useQuery(["ecosystem23"], async () => {
     const res = await fetch(
       `https://api.covalenthq.com/v1/${chainID}/xy=k/${dexName}/pools/?key=${APIKey}`
     );
@@ -93,11 +91,12 @@ const Pool = () => {
     setPage(0);
   };
 
+  if (isFetching) return <Progress size="xs" isIndeterminate />;
   return (
     <>
       {" "}
       <div>
-        <Ecosystempoolspang />
+        <Ecosystempoolsspooky />
 
         <TableContainer component={Paper} className={classes.tableContainer}>
           <Table

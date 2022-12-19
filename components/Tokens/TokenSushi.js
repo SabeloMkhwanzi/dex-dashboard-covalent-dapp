@@ -34,7 +34,7 @@ import {
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
-import Ecosystempoolspang from "../Ecosystem/ecosystempoolspang";
+import Ecosystemtokenssushi from "../Ecosystem/ecosystemtokenssushi";
 
 const useStyles = makeStyles((theme) => ({
   table: {
@@ -50,33 +50,32 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "0.75rem",
     borderRadius: 8,
     padding: "3px 10px",
-    display: "inline-block",
+    display: "center",
   },
 }));
 
 import { useQuery } from "react-query";
 //COVALENT API Key
 const APIKey = process.env.NEXT_PUBLIC_COVALENT_APIKEY;
-
 const chainID = 1;
 const dexName = "sushiswap";
 
-const Pool = () => {
+const Token = () => {
   const classes = useStyles();
   const [page, setPage] = React.useState(0);
-  const [rowsPerPage, setRowsPerPage] = React.useState(5);
+  const [rowsPerPage, setRowsPerPage] = React.useState(10);
 
   // used React-Query to fetch Covalent API
-  const { data, error, isFetching } = useQuery(["ecosystem20"], async () => {
+  const { data, error, isFetching } = useQuery(["ecosystem35"], async () => {
     const res = await fetch(
-      `https://api.covalenthq.com/v1/${chainID}/xy=k/${dexName}/pools/?key=${APIKey}`
+      `https://api.covalenthq.com/v1/${chainID}/xy=k/${dexName}/tokens/?key=${APIKey}`
     );
     return res.json();
   });
 
   const chainItems = data?.data?.items;
 
-  //console.log(chainItems);
+  console.log(chainItems);
 
   if (isFetching) return <Progress size="xs" isIndeterminate />;
 
@@ -97,7 +96,7 @@ const Pool = () => {
     <>
       {" "}
       <div>
-        <Ecosystempoolspang />
+        <Ecosystemtokenssushi />
 
         <TableContainer component={Paper} className={classes.tableContainer}>
           <Table
@@ -116,6 +115,11 @@ const Pool = () => {
                 </Th>
                 <Th>
                   <Text color={useColorModeValue("white", "gray.500")}>
+                    SYMBOL
+                  </Text>
+                </Th>
+                <Th>
+                  <Text color={useColorModeValue("white", "gray.500")}>
                     LIQUIDITY
                   </Text>
                 </Th>
@@ -126,22 +130,12 @@ const Pool = () => {
                 </Th>
                 <Th>
                   <Text color={useColorModeValue("white", "gray.500")}>
-                    VOLUME(7D)
+                    PRICE
                   </Text>
                 </Th>
                 <Th>
                   <Text color={useColorModeValue("white", "gray.500")}>
                     SWAP(24H)
-                  </Text>
-                </Th>
-                <Th>
-                  <Text color={useColorModeValue("white", "gray.500")}>
-                    FEES(24H)
-                  </Text>
-                </Th>
-                <Th>
-                  <Text color={useColorModeValue("white", "gray.500")}>
-                    %FEES(YEARLY)
                   </Text>
                 </Th>
               </TableRow>
@@ -151,41 +145,23 @@ const Pool = () => {
                 .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
                 .map((items) => (
                   <Tr key={items.chain_id}>
-                    <Td>
-                      <HStack>
-                        <Avatar
-                          name={items.token_0.contract_name}
-                          src={items.token_0.logo_url}
-                        />
-                        <Avatar
-                          name={items.token_1.contract_name}
-                          src={items.token_1.logo_url}
-                        />
-                        <Text color={useColorModeValue("white", "gray.200")}>
-                          {items.token_0.contract_ticker_symbol} –
-                        </Text>
-                        <Text color={useColorModeValue("white", "gray.200")}>
-                          {items.token_1.contract_ticker_symbol}
-                        </Text>
-                      </HStack>
+                    <Td color={useColorModeValue("white", "gray.200")}>
+                      {items.contract_name}
+                    </Td>
+                    <Td color={useColorModeValue("white", "gray.200")}>
+                      {items.contract_ticker_symbol}
                     </Td>
                     <Td color={useColorModeValue("white", "gray.200")}>
                       ${items.total_liquidity_quote}
                     </Td>
                     <Td color={useColorModeValue("white", "gray.200")}>
-                      ${items.volume_24h_quote}
+                      ${items.total_volume_24h_quote}
                     </Td>
                     <Td color={useColorModeValue("white", "gray.200")}>
-                      ${items.volume_7d_quote}
+                      ${items.quote_rate}
                     </Td>
                     <Td color={useColorModeValue("white", "gray.200")}>
                       {items.swap_count_24h}
-                    </Td>
-                    <Td color={useColorModeValue("white", "gray.200")}>
-                      ${items.fee_24h_quote}
-                    </Td>
-                    <Td color={useColorModeValue("green", "green")}>
-                      {items.annualized_fee * 100}%
                     </Td>
                   </Tr>
                 ))}
@@ -208,4 +184,4 @@ const Pool = () => {
   );
 };
 
-export default Pool;
+export default Token;
