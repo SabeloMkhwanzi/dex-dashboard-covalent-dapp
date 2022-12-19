@@ -34,7 +34,7 @@ import {
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
-import Ecosystempoolsquick from "../Ecosystem/ecosystempoolsquick";
+import EcosystemPoolsQuick from "../Ecosystem/EcosystemPoolsQuick";
 
 const useStyles = makeStyles((theme) => ({
   table: {
@@ -96,7 +96,7 @@ const Pool = () => {
     <>
       {" "}
       <div>
-        <Ecosystempoolsquick />
+        <EcosystemPoolsQuick />
 
         <TableContainer component={Paper} className={classes.tableContainer}>
           <Table

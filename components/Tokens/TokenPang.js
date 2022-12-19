@@ -34,7 +34,7 @@ import {
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
-import Ecosystemtokenspang from "../Ecosystem/ecosystemtokenspang";
+import EcosystemTokensPang from "../Ecosystem/EcosystemTokensPang";
 
 const useStyles = makeStyles((theme) => ({
   table: {
@@ -97,7 +97,7 @@ const Token = () => {
     <>
       {" "}
       <div>
-        <Ecosystemtokenspang />
+        <EcosystemTokensPang />
 
         <TableContainer component={Paper} className={classes.tableContainer}>
           <Table

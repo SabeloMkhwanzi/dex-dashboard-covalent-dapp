@@ -14,7 +14,7 @@ import {
 } from "@chakra-ui/react";
 // Components import
 
-import Ecosystem from "../components/Ecosystem/ecosystem";
+import Ecosystem from "../components/Ecosystem/Ecosystem";
 
 const Echome = () => {
   return (

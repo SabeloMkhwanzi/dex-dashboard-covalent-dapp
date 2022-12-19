@@ -34,7 +34,7 @@ import {
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
-import Ecosystempoolsspirit from "../Ecosystem/ecosystempoolsspirit";
+import EcosystemPoolsSpooky from "../Ecosystem/EcosystemPoolsSpooky";
 
 const useStyles = makeStyles((theme) => ({
   table: {
@@ -95,9 +95,8 @@ const Pool = () => {
   if (isFetching) return <Progress size="xs" isIndeterminate />;
   return (
     <>
-      {" "}
       <div>
-        <Ecosystempoolsspirit />
+        <EcosystemPoolsSpooky />
 
         <TableContainer component={Paper} className={classes.tableContainer}>
           <Table

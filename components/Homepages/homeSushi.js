@@ -13,7 +13,7 @@ import {
 } from "@chakra-ui/react";
 // Components import
 import Health from "../Health/health";
-import Ecosystem from "../Ecosystem/ecosystem";
+import EcosystemSushi from "../Ecosystem/EcosystemSushi";
 
 const HomeSushi = () => {
   return (
@@ -82,7 +82,7 @@ const HomeSushi = () => {
         </Text>
       </Box>
       <Health />
-      <Ecosystem />
+      <EcosystemSushi />
     </div>
   );
 };

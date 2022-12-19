@@ -20,23 +20,28 @@ import {
   useColorModeValue,
   useDisclosure,
   useColorMode,
-  Link
+  Link,
 } from "@chakra-ui/react";
 import { FaBell, FaClipboardCheck, FaRss } from "react-icons/fa";
 import { AiFillGift } from "react-icons/ai";
-import { AiOutlineDashboard } from "react-icons/ai"
+import { AiOutlineDashboard } from "react-icons/ai";
 import { BsGearFill, BsCurrencyExchange } from "react-icons/bs";
-import { GiToken } from "react-icons/gi"
-import { FcAbout } from "react-icons/fc"
+import { GiToken } from "react-icons/gi";
+import { FcAbout } from "react-icons/fc";
 import { FiMenu, FiSearch } from "react-icons/fi";
 import { HiCode, HiCollection } from "react-icons/hi";
-import { MdHome, MdKeyboardArrowRight, MdGeneratingTokens, MdOutlineGames } from "react-icons/md";
+import {
+  MdHome,
+  MdKeyboardArrowRight,
+  MdGeneratingTokens,
+  MdOutlineGames,
+} from "react-icons/md";
 import { FaMoon, FaSun } from "react-icons/fa";
 
 //import { Logo } from "@choc-ui/logo";
 
-import Homespooky from "../components/Homepages/homespooky";
-import Footer from "../components/Footer/Footers"
+import HomeSpooky from "../components/Homepages/homeSpooky";
+import Footer from "../components/Footer/Footers";
 import { Dashboard } from "@material-ui/icons";
 
 export default function Swibc() {
@@ -44,12 +49,11 @@ export default function Swibc() {
   const integrations = useDisclosure();
   const { toggleColorMode: toggleMode } = useColorMode();
   const SwitchIcon = useColorModeValue(FaMoon, FaSun);
-  const text = useColorModeValue("dark", "light");  
+  const text = useColorModeValue("dark", "light");
 
   const NavItem = (props) => {
     const { icon, children, ...rest } = props;
     return (
-        
       <Flex
         align="center"
         px="4"
@@ -117,17 +121,27 @@ export default function Swibc() {
         color="gray.600"
         aria-label="Main Navigation"
       >
-        <NavItem color="green.300" icon={AiOutlineDashboard}><Link href={'/'}>OVERVIEW</Link></NavItem>
-        <NavItem color="green.300" icon={MdGeneratingTokens}><Link href={'poolsushi'}>POOLS</Link></NavItem>
-        <NavItem color="green.300" icon={GiToken}><Link href={'tokensushi'}>TOKENS</Link></NavItem>
-        <NavItem color="green.300" icon={BsCurrencyExchange}><Link href={'exchanges'}>EXCHANGES</Link></NavItem>
-        <NavItem color="green.300" icon={FcAbout}><Link href={'about'}>ABOUT</Link></NavItem>
+        <NavItem color="green.300" icon={AiOutlineDashboard}>
+          <Link href={"/"}>OVERVIEW</Link>
+        </NavItem>
+        <NavItem color="green.300" icon={MdGeneratingTokens}>
+          <Link href={"poolsushi"}>POOLS</Link>
+        </NavItem>
+        <NavItem color="green.300" icon={GiToken}>
+          <Link href={"tokensushi"}>TOKENS</Link>
+        </NavItem>
+        <NavItem color="green.300" icon={BsCurrencyExchange}>
+          <Link href={"exchanges"}>EXCHANGES</Link>
+        </NavItem>
+        <NavItem color="green.300" icon={FcAbout}>
+          <Link href={"about"}>ABOUT</Link>
+        </NavItem>
       </Flex>
     </Box>
   );
   return (
-      <Box
-          borderColor="blue.300"
+    <Box
+      borderColor="blue.300"
       as="section"
       bg={useColorModeValue("gray.50", "gray.700")}
       minH="100vh"
@@ -165,20 +179,22 @@ export default function Swibc() {
           />
           <InputGroup w="96" display={{ base: "none", md: "flex" }}>
             <InputLeftElement color="gray.500" children={<FiSearch />} />
-            <Input borderColor="green.900" borderRadius="full" placeholder="Search..." />
+            <Input
+              borderColor="green.900"
+              borderRadius="full"
+              placeholder="Search..."
+            />
           </InputGroup>
-            
-         <Box
-          as="iframe"
-          src="https://coinhippo.io?widget=price-marquee&theme=?"
-          title="Price Update"
-          frameBorder="0"
-          width="100%"
-          height="35"
-          />      
+
+          <Box
+            as="iframe"
+            src="https://coinhippo.io?widget=price-marquee&theme=?"
+            title="Price Update"
+            frameBorder="0"
+            width="100%"
+            height="35"
+          />
           <Flex align="center">
-          
-              
             <IconButton
               borderRadius="lg"
               borderWidth={3}
@@ -192,11 +208,10 @@ export default function Swibc() {
             />
           </Flex>
         </Flex>
-        
-        {/* Content below  */}      
+
+        {/* Content below  */}
         <Box bg={useColorModeValue("white", "gray.900")} as="main" p="4">
-          
-         <Homespooky />  
+          <HomeSpooky />
         </Box>
         <Footer />
       </Box>
