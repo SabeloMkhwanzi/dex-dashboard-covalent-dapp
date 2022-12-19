@@ -14,12 +14,13 @@ import {
 } from "@chakra-ui/react";
 // Components import
 
-//import Ecosystem from "../components/Ecosystem/ecosystem";
+import Ecosystem from "../components/Ecosystem/ecosystem";
 
 const Echome = () => {
   return (
     <div>
-      {/* <Menu>
+      <Box paddingBottom="5">
+        <Menu>
           <MenuButton
             as={Button}
             maxW="150px"
@@ -72,16 +73,17 @@ const Echome = () => {
               <Link href={"homespirit"}>Spiritswap</Link>
             </MenuItem>
           </MenuList>
-        </Menu> */}
+        </Menu>
 
-      <Text fontWeight="bold" fontSize="xl">
-        DASHBOARD
-      </Text>
-      <Text fontWeight="light" as="h6" color="gray.500">
-        OVERVIEW
-      </Text>
+        <Text fontWeight="bold" fontSize="xl">
+          DASHBOARD
+        </Text>
+        <Text fontWeight="light" as="h6" color="gray.500">
+          OVERVIEW
+        </Text>
+      </Box>
 
-      {/* <Ecosystem /> */}
+      <Ecosystem />
     </div>
   );
 };
