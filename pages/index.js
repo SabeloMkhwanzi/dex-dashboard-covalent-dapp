@@ -2,6 +2,7 @@
 
 import Footers from "../components/Footer/Footers";
 import Siderbar from "../components/Siderbar/siderbar";
+import Head from "next/head";
 
 // Chakra imports
 import { Box } from "@chakra-ui/layout";
@@ -9,10 +10,10 @@ import { Box } from "@chakra-ui/layout";
 export default function Home() {
   return (
     <>
-      <head>
+      <Head>
         <title>DashDEX - DeX Dashboard</title>
         <meta name="description" content="DEX Dashboard" />
-      </head>
+      </Head>
       <Box>
         <Siderbar />
         <Footers />
