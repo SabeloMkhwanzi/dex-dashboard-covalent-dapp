@@ -4,22 +4,22 @@ import {
   Box,
   Text,
   Button,
+  Link,
+  Avatar,
+  Select,
   Menu,
   MenuButton,
   MenuList,
   MenuItem,
-  Avatar,
-  Link,
 } from "@chakra-ui/react";
 // Components import
-import Health from "../Health/health";
-import Ecosystempang from "../Ecosystem/ecosystempang";
 
-const HomePang = () => {
+//import Ecosystem from "../components/Ecosystem/ecosystem";
+
+const Echome = () => {
   return (
     <div>
-      <Box paddingBottom="5">
-        <Menu>
+      {/* <Menu>
           <MenuButton
             as={Button}
             maxW="150px"
@@ -72,19 +72,18 @@ const HomePang = () => {
               <Link href={"homespirit"}>Spiritswap</Link>
             </MenuItem>
           </MenuList>
-        </Menu>
+        </Menu> */}
 
-        <Text fontWeight="bold" fontSize="xl">
-          DASHBOARD
-        </Text>
-        <Text fontWeight="light" as="h6" color="gray.500">
-          OVERVIEW
-        </Text>
-      </Box>
-      <Health />
-      <Ecosystempang />
+      <Text fontWeight="bold" fontSize="xl">
+        DASHBOARD
+      </Text>
+      <Text fontWeight="light" as="h6" color="gray.500">
+        OVERVIEW
+      </Text>
+
+      {/* <Ecosystem /> */}
     </div>
   );
 };
 
-export default HomePang;
+export default Echome;

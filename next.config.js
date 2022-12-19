@@ -1,6 +1,6 @@
 module.exports = {
-  reactStrictMode: true,
-   eslint: {
-    ignoreDuringBuilds: true
-  }
-}
+  reactStrictMode: false,
+  eslint: {
+    ignoreDuringBuilds: false,
+  },
+};
