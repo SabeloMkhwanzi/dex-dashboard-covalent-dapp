@@ -19,6 +19,7 @@ import {
 } from "@chakra-ui/react";
 import { AiOutlineDashboard } from "react-icons/ai";
 import { BsCurrencyExchange } from "react-icons/bs";
+import { FcAbout } from "react-icons/fc";
 import { GiToken } from "react-icons/gi";
 import { FiMenu, FiSearch } from "react-icons/fi";
 import { MdGeneratingTokens } from "react-icons/md";
