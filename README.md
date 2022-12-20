@@ -37,7 +37,7 @@
 
 
 4 Exchanges - Dashboard overview\
-![defi_DexSwap](https://github.com/SabeloMkhwanzi/dex-dashboard-covalent-dapp/blob/main/DEX-Analytics-Template-SabeloMkhwanzi-dex.jpg)
+![defi_DexSwap](https://github.com/SabeloMkhwanzi/dex-dashboard-covalent-dapp/blob/main/public/DEX-Analytics-Template-SabeloMkhwanzi-dash.jpg)
 
 
 5 About - About this Project
