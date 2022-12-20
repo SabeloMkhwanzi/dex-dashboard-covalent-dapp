@@ -33,7 +33,7 @@
 
 
 3 Token - Tokens selection with the list of dex\
-![defi_DexSwap](https://github.com/SabeloMkhwanzi/dex-dashboard-covalent-dapp/blob/main/DEX-Analytics-Template-SabeloMkhwanzi-tokens1.jpg)
+![defi_DexSwap](https://github.com/SabeloMkhwanzi/dex-dashboard-covalent-dapp/blob/main/public/DEX-Analytics-Template-SabeloMkhwanzi-tokens1.jpg)
 
 
 4 Exchanges - Dashboard overview\
