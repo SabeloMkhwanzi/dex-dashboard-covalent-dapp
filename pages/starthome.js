@@ -12,9 +12,8 @@ import {
   MenuList,
   MenuItem,
 } from "@chakra-ui/react";
+import { EcosystemSushi, Health } from "../components";
 // Components import
-
-import Ecosystem from "../components/Ecosystem/Ecosystem";
 
 const Echome = () => {
   return (
@@ -82,8 +81,8 @@ const Echome = () => {
           OVERVIEW
         </Text>
       </Box>
-
-      <Ecosystem />
+      <Health />
+      <EcosystemSushi />
     </div>
   );
 };

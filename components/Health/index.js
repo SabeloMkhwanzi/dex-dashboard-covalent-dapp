@@ -19,7 +19,7 @@ const dexName = "spookyswap";
 
 //https://api.covalenthq.com/v1/250/xy=k/spookyswap/health/
 
-const Healths = () => {
+export default function Health() {
   // used React-Query to fetch Covalent API
   const { data, error, isFetching } = useQuery(["healths"], async () => {
     const res = await fetch(
@@ -194,6 +194,4 @@ const Healths = () => {
       ))}
     </Box>
   );
-};
-
-export default Healths;
+}

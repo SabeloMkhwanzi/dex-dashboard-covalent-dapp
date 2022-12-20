@@ -37,11 +37,7 @@ import {
   MdOutlineGames,
 } from "react-icons/md";
 import { FaMoon, FaSun } from "react-icons/fa";
-
-//import { Logo } from "@choc-ui/logo";
-
-import HomeSpiritPage from "../components/Homepages/homeSpiritPage";
-import Footer from "../components/Footer/Footers";
+import { FooterPage, HomeSpirit } from "../components";
 
 export default function Swibc() {
   const sidebar = useDisclosure();
@@ -210,9 +206,9 @@ export default function Swibc() {
 
         {/* Content below  */}
         <Box bg={useColorModeValue("white", "gray.900")} as="main" p="4">
-          <HomeSpiritPage />
+          <HomeSpirit />
         </Box>
-        <Footer />
+        <FooterPage />
       </Box>
     </Box>
   );

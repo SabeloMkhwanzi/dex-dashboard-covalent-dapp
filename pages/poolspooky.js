@@ -38,11 +38,7 @@ import {
   MdOutlineGames,
 } from "react-icons/md";
 import { FaMoon, FaSun } from "react-icons/fa";
-
-//import { Logo } from "@choc-ui/logo";
-
-import PoolSpookyTable from "../components/Pools/PoolSpookyTable";
-import Footers from "../components/Footer/Footers";
+import { FooterPage, PoolSpooky } from "../components";
 
 export default function Swibc() {
   const sidebar = useDisclosure();
@@ -210,16 +206,11 @@ export default function Swibc() {
         </Flex>
 
         {/* Content below Spookyswap pool */}
-        <Box
-          bg={useColorModeValue("white", "gray.900")}
-          width="100hv"
-          as="main"
-          p="4"
-        >
-          <PoolSpookyTable />
+        <Box bg={useColorModeValue("white", "gray.900")} as="main" p="4">
+          <PoolSpooky />
         </Box>
       </Box>
-      <Footers />
+      <FooterPage />
     </Box>
   );
 }
