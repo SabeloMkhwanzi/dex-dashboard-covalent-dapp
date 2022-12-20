@@ -82,10 +82,34 @@ The Covalent API empowers an army of developers, analysts and 'data nerds' to BU
 * Your DEX Analytics Dashboard template code repo must be publicly accessible
 * The submission must be released under a GPLv3 compatible license
 
+## Installing
+
+1. clone the repo with the following git command:
+
+```bash
+git clone https://github.com/SabeloMkhwanzi/eddalytics
 ```
-   $ git clone gh repo clone SabeloMkhwanzi/dex-dashboard-covalent-dapp
-   $ cd dex-dashboard-covalent-dapp
-   $ npm install
-   $ npm run dev
-   ```
+
+2. open a terminal in the root directory of the project and run:
+
+```bash
+npm install
+```
+
+to install all the package dependencies for the project
+
+Create a .env.local file in the root folder and populate it with the following variables, Get Api a key from [Covalent](https://www.covalenthq.com/)
+
+```bash
+NEXT_PUBLIC_COVALENT_APIKEY=
+```
+
+
+Finally, run the development server:
+
+```bash
+npm run dev
+```
+
+Happy Hacking 😊
 
