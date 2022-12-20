@@ -2,6 +2,13 @@
 ## DEX Analytics Dashboard Template : [This project was the top winner in the dex category!](https://www.covalenthq.com/blog/gitcoin-winners-announcement/)
 
 ## New version coming soon!!!🔥
+## Roadmap for the new version
+- [ ] Add more DEX protocol 
+- [ ] Add Project logo
+- [ ] Add Dex chart using Covalent Api endpoints
+- [ ] Improve UI UX 
+- [ ] Fully mobile reponsive
+- [ ] Adding new dashboard feature  
 
 ### Features
  :zap: Fully Responsive\
