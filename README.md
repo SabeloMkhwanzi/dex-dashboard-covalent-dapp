@@ -7,7 +7,7 @@
  :zap: Fully Responsive\
  :zap: JavaScript\
  :zap: Web application framework - Next JS\
- :zap: Api Fetching Data tool - Redux Toolkit\ (Change to React-Qeury)
+ :zap: Api Fetching Data tool - Redux Toolkit (Change to React-Query)\
  :zap: BackEnd  - Covalent Api\
  :zap: UI Design Tool - Chakra UI      
  :zap: Host\Deployment - Vercel
