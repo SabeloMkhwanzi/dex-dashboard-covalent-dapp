@@ -29,7 +29,7 @@
 
 
 2 Pool - Pools selection with the list of dex\
-![defi_DexSwap](https://github.com/SabeloMkhwanzi/dex-dashboard-covalent-dapp/blob/main/DEX-Analytics-Template-SabeloMkhwanzi.jpg)
+![defi_DexSwap](https://github.com/SabeloMkhwanzi/dex-dashboard-covalent-dapp/blob/main/public/DEX-Analytics-Template-SabeloMkhwanzi.jpg)
 
 
 3 Token - Tokens selection with the list of dex\
