@@ -1,10 +1,7 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable react/no-children-prop */
 import React from "react";
 import {
-  Avatar,
   Box,
-  Collapse,
   Drawer,
   DrawerContent,
   DrawerOverlay,
@@ -15,37 +12,26 @@ import {
   InputGroup,
   InputLeftElement,
   Text,
-  VStack,
-  AspectRatio,
   useColorModeValue,
   useDisclosure,
   useColorMode,
   Link,
 } from "@chakra-ui/react";
-import { FaBell, FaClipboardCheck, FaRss } from "react-icons/fa";
-import { AiFillGift } from "react-icons/ai";
 import { AiOutlineDashboard } from "react-icons/ai";
-import { BsGearFill, BsCurrencyExchange } from "react-icons/bs";
+import { BsCurrencyExchange } from "react-icons/bs";
 import { GiToken } from "react-icons/gi";
 import { FcAbout } from "react-icons/fc";
 import { FiMenu, FiSearch } from "react-icons/fi";
-import { HiCode, HiCollection } from "react-icons/hi";
-import { Dashboard } from "@material-ui/icons";
-import {
-  MdHome,
-  MdKeyboardArrowRight,
-  MdGeneratingTokens,
-  MdOutlineGames,
-} from "react-icons/md";
+import { MdGeneratingTokens } from "react-icons/md";
 import { FaMoon, FaSun } from "react-icons/fa";
 import { FooterPage, PoolSushi } from "../components";
 
 export default function Swibc() {
   const sidebar = useDisclosure();
-  const integrations = useDisclosure();
   const { toggleColorMode: toggleMode } = useColorMode();
   const SwitchIcon = useColorModeValue(FaMoon, FaSun);
   const text = useColorModeValue("dark", "light");
+  const hoverColor = useColorModeValue("gray.600", "gray.300");
 
   const NavItem = (props) => {
     const { icon, children, ...rest } = props;
@@ -66,16 +52,7 @@ export default function Swibc() {
         transition=".15s ease"
         {...rest}
       >
-        {icon && (
-          <Icon
-            mr="2"
-            boxSize="4"
-            _groupHover={{
-              color: useColorModeValue("gray.600", "gray.300"),
-            }}
-            as={icon}
-          />
-        )}
+        {icon && <Icon mr="2" boxSize="4" _groupHover={hoverColor} as={icon} />}
         {children}
       </Flex>
     );
@@ -93,7 +70,7 @@ export default function Swibc() {
       overflowX="hidden"
       overflowY="auto"
       bg={useColorModeValue("white", "gray.800")}
-      borderColor={useColorModeValue("inherit", "green.900")}
+      borderColor={useColorModeValue("green.700", "green.900")}
       borderRightWidth="1px"
       w="60"
       {...props}
@@ -117,19 +94,34 @@ export default function Swibc() {
         color="gray.600"
         aria-label="Main Navigation"
       >
-        <NavItem color="green.300" icon={AiOutlineDashboard}>
+        <NavItem
+          color={useColorModeValue("inherit", "green.300")}
+          icon={AiOutlineDashboard}
+        >
           <Link href={"/"}>DASHBOARD</Link>
         </NavItem>
-        <NavItem color="green.300" icon={MdGeneratingTokens}>
+        <NavItem
+          color={useColorModeValue("inherit", "green.300")}
+          icon={MdGeneratingTokens}
+        >
           <Link href={"poolQuick"}>POOLS</Link>
         </NavItem>
-        <NavItem color="green.300" icon={GiToken}>
+        <NavItem
+          color={useColorModeValue("inherit", "green.300")}
+          icon={GiToken}
+        >
           <Link href={"token"}>TOKENS</Link>
         </NavItem>
-        <NavItem color="green.300" icon={BsCurrencyExchange}>
+        <NavItem
+          color={useColorModeValue("inherit", "green.300")}
+          icon={BsCurrencyExchange}
+        >
           <Link href={"exchanges"}>EXCHANGES</Link>
         </NavItem>
-        <NavItem color="green.300" icon={FcAbout}>
+        <NavItem
+          color={useColorModeValue("inherit", "green.300")}
+          icon={FcAbout}
+        >
           <Link href={"about"}>ABOUT</Link>
         </NavItem>
       </Flex>
@@ -163,7 +155,7 @@ export default function Swibc() {
           px="4"
           bg={useColorModeValue("white", "gray.800")}
           borderBottomWidth="1px"
-          borderColor={useColorModeValue("inherit", "green.900")}
+          borderColor={useColorModeValue("green.700", "green.900")}
           h="14"
         >
           <IconButton

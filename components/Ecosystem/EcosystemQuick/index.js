@@ -39,6 +39,9 @@ export default function EcosystemQuick() {
   if (error) {
     return <span>Error: {error.message}</span>;
   }
+
+  var numbro = require("numbro");
+
   return (
     <div>
       <Box justifyContent="center" textAlign="center" paddingTop="34">
@@ -75,7 +78,12 @@ export default function EcosystemQuick() {
                   textTransform="uppercase"
                   ml="2"
                 >
-                  ${items.gas_token_price_quote}
+                  $
+                  {numbro(items.gas_token_price_quote).formatCurrency({
+                    average: true,
+                    mantissa: 2,
+                    optionalMantissa: true,
+                  })}
                 </Box>
               </Box>
             </Box>
@@ -148,7 +156,12 @@ export default function EcosystemQuick() {
                   color={useColorModeValue("gray.600", "green.600")}
                   as="samp"
                 >
-                  ${items.total_fees_24h}
+                  $
+                  {numbro(items.total_fees_24h).formatCurrency({
+                    average: true,
+                    mantissa: 2,
+                    optionalMantissa: true,
+                  })}
                 </chakra.p>
               </Box>
             </Box>
@@ -191,7 +204,7 @@ export default function EcosystemQuick() {
         <Box paddingTop={12}>
           <SimpleGrid columns={[1, null, 1]} spacing={2}>
             <Box
-              minW="1100"
+              w={[300, 400, 1100]}
               mx="auto"
               px={2}
               py={2}

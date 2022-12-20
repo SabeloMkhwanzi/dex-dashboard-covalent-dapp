@@ -2,33 +2,19 @@
 import React from "react";
 import {
   Table,
-  Thead,
-  Tbody,
-  Tfoot,
   Tr,
   Th,
   Td,
-  TableCaption,
-  Box,
   Text,
   useColorModeValue,
-  Flex,
-  Wrap,
-  WrapItem,
-  Avatar,
-  HStack,
-  Image,
   Progress,
 } from "@chakra-ui/react";
 import {
   TableBody,
-  TableCell,
   TableContainer,
   TableHead,
   TableRow,
   Paper,
-  Grid,
-  Typography,
   TablePagination,
   TableFooter,
 } from "@material-ui/core";
@@ -54,6 +40,7 @@ const useStyles = makeStyles((theme) => ({
 
 import { useQuery } from "react-query";
 import EcosystemTokenSpooky from "./EcosystemTokenSpooky";
+import numbro from "numbro";
 //COVALENT API Key
 const APIKey = process.env.NEXT_PUBLIC_COVALENT_APIKEY;
 const chainID = 250;
@@ -103,37 +90,37 @@ export default function TokenSpooky() {
             borderWidth={1}
             className={classes.table}
             aria-label="simple table"
-            bg={useColorModeValue("white", "gray.800")}
+            bg={useColorModeValue("inherit", "gray.800")}
           >
             <TableHead>
               <TableRow>
                 <Th>
-                  <Text color={useColorModeValue("white", "gray.500")}>
+                  <Text color={useColorModeValue("inherit", "gray.500")}>
                     NAME
                   </Text>
                 </Th>
                 <Th>
-                  <Text color={useColorModeValue("white", "gray.500")}>
+                  <Text color={useColorModeValue("inherit", "gray.500")}>
                     SYMBOL
                   </Text>
                 </Th>
                 <Th>
-                  <Text color={useColorModeValue("white", "gray.500")}>
+                  <Text color={useColorModeValue("inherit", "gray.500")}>
                     LIQUIDITY
                   </Text>
                 </Th>
                 <Th>
-                  <Text color={useColorModeValue("white", "gray.500")}>
+                  <Text color={useColorModeValue("inherit", "gray.500")}>
                     VOLUME(24H)
                   </Text>
                 </Th>
                 <Th>
-                  <Text color={useColorModeValue("white", "gray.500")}>
+                  <Text color={useColorModeValue("inherit", "gray.500")}>
                     PRICE
                   </Text>
                 </Th>
                 <Th>
-                  <Text color={useColorModeValue("white", "gray.500")}>
+                  <Text color={useColorModeValue("inherit", "gray.500")}>
                     SWAP(24H)
                   </Text>
                 </Th>
@@ -144,22 +131,34 @@ export default function TokenSpooky() {
                 .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
                 .map((items) => (
                   <Tr key={items.chain_id}>
-                    <Td color={useColorModeValue("white", "gray.200")}>
+                    <Td color={useColorModeValue("inherit", "gray.200")}>
                       {items.contract_name}
                     </Td>
-                    <Td color={useColorModeValue("white", "gray.200")}>
+                    <Td color={useColorModeValue("inherit", "gray.200")}>
                       {items.contract_ticker_symbol}
                     </Td>
-                    <Td color={useColorModeValue("white", "gray.200")}>
-                      ${items.total_liquidity_quote}
+                    <Td color={useColorModeValue("inherit", "gray.200")}>
+                      {numbro(items.total_liquidity_quote).formatCurrency({
+                        average: true,
+                        mantissa: 2,
+                        optionalMantissa: true,
+                      })}
                     </Td>
-                    <Td color={useColorModeValue("white", "gray.200")}>
-                      ${items.total_volume_24h_quote}
+                    <Td color={useColorModeValue("inherit", "gray.200")}>
+                      {numbro(items.total_volume_24h_quote).formatCurrency({
+                        average: true,
+                        mantissa: 2,
+                        optionalMantissa: true,
+                      })}
                     </Td>
-                    <Td color={useColorModeValue("white", "gray.200")}>
-                      ${items.quote_rate}
+                    <Td color={useColorModeValue("inherit", "gray.200")}>
+                      {numbro(items.quote_rate).formatCurrency({
+                        average: true,
+                        mantissa: 2,
+                        optionalMantissa: true,
+                      })}
                     </Td>
-                    <Td color={useColorModeValue("white", "gray.200")}>
+                    <Td color={useColorModeValue("inherit", "gray.200")}>
                       {items.swap_count_24h}
                     </Td>
                   </Tr>

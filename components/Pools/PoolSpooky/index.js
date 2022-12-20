@@ -2,33 +2,21 @@
 import React from "react";
 import {
   Table,
-  Thead,
-  Tbody,
-  Tfoot,
   Tr,
   Th,
   Td,
-  TableCaption,
-  Box,
   Text,
   useColorModeValue,
-  Flex,
-  Wrap,
-  WrapItem,
   Avatar,
   HStack,
-  Image,
   Progress,
 } from "@chakra-ui/react";
 import {
   TableBody,
-  TableCell,
   TableContainer,
   TableHead,
   TableRow,
   Paper,
-  Grid,
-  Typography,
   TablePagination,
   TableFooter,
 } from "@material-ui/core";
@@ -53,6 +41,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 import { useQuery } from "react-query";
 import EcosystemPoolSpooky from "./EcosystemPoolSpooky";
+import numbro from "numbro";
 //COVALENT API Key
 const APIKey = process.env.NEXT_PUBLIC_COVALENT_APIKEY;
 const chainID = 250;
@@ -103,42 +92,42 @@ export default function PoolSpooky() {
             borderWidth={1}
             className={classes.table}
             aria-label="simple table"
-            bg={useColorModeValue("white", "gray.800")}
+            bg={useColorModeValue("inherit", "gray.800")}
           >
             <TableHead>
               <TableRow>
                 <Th>
-                  <Text color={useColorModeValue("white", "gray.500")}>
+                  <Text color={useColorModeValue("inherit", "gray.500")}>
                     NAME
                   </Text>
                 </Th>
                 <Th>
-                  <Text color={useColorModeValue("white", "gray.500")}>
+                  <Text color={useColorModeValue("inherit", "gray.500")}>
                     LIQUIDITY
                   </Text>
                 </Th>
                 <Th>
-                  <Text color={useColorModeValue("white", "gray.500")}>
+                  <Text color={useColorModeValue("inherit", "gray.500")}>
                     VOLUME(24H)
                   </Text>
                 </Th>
                 <Th>
-                  <Text color={useColorModeValue("white", "gray.500")}>
+                  <Text color={useColorModeValue("inherit", "gray.500")}>
                     VOLUME(7D)
                   </Text>
                 </Th>
                 <Th>
-                  <Text color={useColorModeValue("white", "gray.500")}>
+                  <Text color={useColorModeValue("inherit", "gray.500")}>
                     SWAP(24H)
                   </Text>
                 </Th>
                 <Th>
-                  <Text color={useColorModeValue("white", "gray.500")}>
+                  <Text color={useColorModeValue("inherit", "gray.500")}>
                     FEES(24H)
                   </Text>
                 </Th>
                 <Th>
-                  <Text color={useColorModeValue("white", "gray.500")}>
+                  <Text color={useColorModeValue("inherit", "gray.500")}>
                     %FEES(YEARLY)
                   </Text>
                 </Th>
@@ -159,31 +148,53 @@ export default function PoolSpooky() {
                           name={items.token_1.contract_name}
                           src={items.token_1.logo_url}
                         />
-                        <Text color={useColorModeValue("white", "gray.200")}>
+                        <Text color={useColorModeValue("inherit", "gray.200")}>
                           {items.token_0.contract_ticker_symbol} –
                         </Text>
-                        <Text color={useColorModeValue("white", "gray.200")}>
+                        <Text color={useColorModeValue("inherit", "gray.200")}>
                           {items.token_1.contract_ticker_symbol}
                         </Text>
                       </HStack>
                     </Td>
-                    <Td color={useColorModeValue("white", "gray.200")}>
-                      ${items.total_liquidity_quote}
+                    <Td color={useColorModeValue("inherit", "gray.200")}>
+                      {numbro(items.total_liquidity_quote).formatCurrency({
+                        average: true,
+                        mantissa: 2,
+                        optionalMantissa: true,
+                      })}
                     </Td>
-                    <Td color={useColorModeValue("white", "gray.200")}>
-                      ${items.volume_24h_quote}
+                    <Td color={useColorModeValue("inherit", "gray.200")}>
+                      {numbro(items.volume_24h_quote).formatCurrency({
+                        average: true,
+                        mantissa: 2,
+                        optionalMantissa: true,
+                      })}
                     </Td>
-                    <Td color={useColorModeValue("white", "gray.200")}>
-                      ${items.volume_7d_quote}
+                    <Td color={useColorModeValue("inherit", "gray.200")}>
+                      {numbro(items.volume_7d_quote).formatCurrency({
+                        average: true,
+                        mantissa: 2,
+                        optionalMantissa: true,
+                      })}
                     </Td>
-                    <Td color={useColorModeValue("white", "gray.200")}>
+                    <Td color={useColorModeValue("inherit", "gray.200")}>
                       {items.swap_count_24h}
                     </Td>
-                    <Td color={useColorModeValue("white", "gray.200")}>
-                      ${items.fee_24h_quote}
+                    <Td color={useColorModeValue("inherit", "gray.200")}>
+                      {numbro(items.fee_24h_quote).formatCurrency({
+                        average: true,
+                        mantissa: 2,
+                        optionalMantissa: true,
+                      })}
                     </Td>
                     <Td color={useColorModeValue("green", "green")}>
-                      {items.annualized_fee * 100}%
+                      {numbro(items.annualized_fee).format({
+                        output: "percent",
+                        mantissa: 1,
+                        spaceSeparated: true,
+                        negative: "parenthesis",
+                      })}
+                      %
                     </Td>
                   </Tr>
                 ))}

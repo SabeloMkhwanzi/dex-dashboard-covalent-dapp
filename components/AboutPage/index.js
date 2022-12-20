@@ -6,9 +6,7 @@ import {
   Image,
   Link,
   HStack,
-  VStack,
   useColorModeValue,
-  Container,
 } from "@chakra-ui/react";
 
 export default function AboutPage() {

@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-no-undef */
 import {
   Box,
+  Center,
   Container,
   Link,
   Text,
@@ -11,8 +12,8 @@ import {
 export default function FooterPage() {
   return (
     <Box
-      bg={useColorModeValue("gray.600", "gray.800")}
-      color={useColorModeValue("gray.600", "gray.800")}
+      bg={useColorModeValue("white", "gray.800")}
+      borderColor={useColorModeValue("inherit", "green.900")}
     >
       <Box
         borderTopWidth={1}
@@ -21,11 +22,13 @@ export default function FooterPage() {
         color={useColorModeValue("gray.600", "green.900")}
       >
         <Container maxW={"6xl"} py={4}>
-          <Text align="right">
-            <Link href={"https://twitter.com/SabeloMkhwanaz"}>
-              © 2021 Made with ❤ by Sabelo
-            </Link>
-          </Text>
+          <Center>
+            <Text align="right">
+              <Link target="_blank" href={"https://twitter.com/SabeloMkhwanaz"}>
+                © {new Date().getFullYear()} Made with ❤ by Sabelo Mkhwanazi
+              </Link>
+            </Text>
+          </Center>
         </Container>
       </Box>
     </Box>

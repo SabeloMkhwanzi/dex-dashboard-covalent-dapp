@@ -19,6 +19,7 @@ import {
   Button,
 } from "@chakra-ui/react";
 import { useQuery } from "react-query";
+import numbro from "numbro";
 
 //COVALENT API Key
 const APIKey = process.env.NEXT_PUBLIC_COVALENT_APIKEY;
@@ -149,7 +150,11 @@ export default function EcosystemTokenSpooky() {
                   textTransform="uppercase"
                   ml="2"
                 >
-                  ${items.gas_token_price_quote}
+                  {numbro(items.gas_token_price_quote).formatCurrency({
+                    average: true,
+                    mantissa: 2,
+                    optionalMantissa: true,
+                  })}
                 </Box>
               </Box>
             </Box>
@@ -222,7 +227,11 @@ export default function EcosystemTokenSpooky() {
                   color={useColorModeValue("gray.600", "green.600")}
                   as="samp"
                 >
-                  ${items.total_fees_24h}
+                  {numbro(items.total_fees_24h).formatCurrency({
+                    average: true,
+                    mantissa: 2,
+                    optionalMantissa: true,
+                  })}
                 </chakra.p>
               </Box>
             </Box>

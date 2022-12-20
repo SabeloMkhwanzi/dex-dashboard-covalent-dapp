@@ -17,8 +17,6 @@ const APIKey = process.env.NEXT_PUBLIC_COVALENT_APIKEY;
 const chainID = 250;
 const dexName = "spookyswap";
 
-//https://api.covalenthq.com/v1/250/xy=k/spookyswap/health/
-
 export default function Health() {
   // used React-Query to fetch Covalent API
   const { data, error, isFetching } = useQuery(["healths"], async () => {

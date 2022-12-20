@@ -46,6 +46,7 @@ export default function Swibc() {
   const { toggleColorMode: toggleMode } = useColorMode();
   const SwitchIcon = useColorModeValue(FaMoon, FaSun);
   const text = useColorModeValue("dark", "light");
+  const hoverColor = useColorModeValue("gray.600", "gray.300");
 
   const NavItem = (props) => {
     const { icon, children, ...rest } = props;
@@ -66,16 +67,7 @@ export default function Swibc() {
         transition=".15s ease"
         {...rest}
       >
-        {icon && (
-          <Icon
-            mr="2"
-            boxSize="4"
-            _groupHover={{
-              color: useColorModeValue("gray.600", "gray.300"),
-            }}
-            as={icon}
-          />
-        )}
+        {icon && <Icon mr="2" boxSize="4" _groupHover={hoverColor} as={icon} />}
         {children}
       </Flex>
     );
@@ -93,7 +85,7 @@ export default function Swibc() {
       overflowX="hidden"
       overflowY="auto"
       bg={useColorModeValue("white", "gray.800")}
-      borderColor={useColorModeValue("inherit", "green.900")}
+      borderColor={useColorModeValue("green.700", "green.900")}
       borderRightWidth="1px"
       w="60"
       {...props}
@@ -117,19 +109,34 @@ export default function Swibc() {
         color="gray.600"
         aria-label="Main Navigation"
       >
-        <NavItem color="green.300" icon={AiOutlineDashboard}>
+        <NavItem
+          color={useColorModeValue("inherit", "green.300")}
+          icon={AiOutlineDashboard}
+        >
           <Link href={"/"}>DASHBOARD</Link>
         </NavItem>
-        <NavItem color="green.300" icon={MdGeneratingTokens}>
+        <NavItem
+          color={useColorModeValue("inherit", "green.300")}
+          icon={MdGeneratingTokens}
+        >
           <Link href={"poolsushi"}>POOLS</Link>
         </NavItem>
-        <NavItem color="green.300" icon={GiToken}>
+        <NavItem
+          color={useColorModeValue("inherit", "green.300")}
+          icon={GiToken}
+        >
           <Link href={"tokensushi"}>TOKENS</Link>
         </NavItem>
-        <NavItem color="green.300" icon={BsCurrencyExchange}>
+        <NavItem
+          color={useColorModeValue("inherit", "green.300")}
+          icon={BsCurrencyExchange}
+        >
           <Link href={"exchanges"}>EXCHANGES</Link>
         </NavItem>
-        <NavItem color="green.300" icon={FcAbout}>
+        <NavItem
+          color={useColorModeValue("inherit", "green.300")}
+          icon={FcAbout}
+        >
           <Link href={"about"}>ABOUT</Link>
         </NavItem>
       </Flex>
@@ -163,7 +170,7 @@ export default function Swibc() {
           px="4"
           bg={useColorModeValue("white", "gray.800")}
           borderBottomWidth="1px"
-          borderColor={useColorModeValue("inherit", "green.900")}
+          borderColor={useColorModeValue("green.700", "green.900")}
           h="14"
         >
           <IconButton
