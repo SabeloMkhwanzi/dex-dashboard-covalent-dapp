@@ -1,7 +1,7 @@
 # Hackathon: DeFi & Cross-chain Interoperability Hackathon with Covalent Api
 ## DEX Analytics Dashboard Template : [This project was the top winner in the dex category!](https://www.covalenthq.com/blog/gitcoin-winners-announcement/)
 
-## New version coming soon!!! 😊  
+## New version coming soon!!!🔥
 
 ### Features
  :zap: Fully Responsive\
