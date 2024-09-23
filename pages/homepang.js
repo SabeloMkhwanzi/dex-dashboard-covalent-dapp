@@ -76,7 +76,6 @@ export default function Swibc() {
       {...props}
     >
       <Flex px="4" py="5" align="center">
-        {/* <Logo /> */}
         <Text
           fontSize="2xl"
           ml="2"
@@ -127,13 +126,11 @@ export default function Swibc() {
       </Flex>
     </Box>
   );
+
   return (
-    <Box
-      borderColor="blue.300"
-      as="section"
-      bg={useColorModeValue("gray.50", "gray.700")}
-      minH="100vh"
-    >
+    <Flex direction="column" minHeight="100vh">
+      {" "}
+      {/* Updated layout */}
       <SidebarContent display={{ base: "none", md: "unset" }} />
       <Drawer
         isOpen={sidebar.isOpen}
@@ -145,7 +142,9 @@ export default function Swibc() {
           <SidebarContent w="full" borderRight="none" />
         </DrawerContent>
       </Drawer>
-      <Box ml={{ base: 0, md: 60 }} transition=".3s ease">
+      <Box flex="1" ml={{ base: 0, md: 60 }} transition=".3s ease">
+        {" "}
+        {/* Content flex grows */}
         <Flex
           position="sticky"
           as="nav"
@@ -173,15 +172,6 @@ export default function Swibc() {
               placeholder="Search..."
             />
           </InputGroup>
-
-          {/* <Box
-            as="iframe"
-            src="https://coinhippo.io?widget=price-marquee&theme=?"
-            title="Price Update"
-            frameBorder="0"
-            width="100%"
-            height="35"
-          /> */}
           <Flex align="center">
             <IconButton
               borderRadius="lg"
@@ -196,13 +186,11 @@ export default function Swibc() {
             />
           </Flex>
         </Flex>
-
-        {/* Content below  */}
         <Box bg={useColorModeValue("white", "gray.900")} as="main" p="4">
           <HomePang />
         </Box>
       </Box>
-      <FooterPage />
-    </Box>
+      <FooterPage /> {/* Footer at the bottom */}
+    </Flex>
   );
 }

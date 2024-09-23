@@ -41,7 +41,8 @@ const useStyles = makeStyles((theme) => ({
 import { useQuery } from "react-query";
 import EcosystemTokenSushi from "./EcosystemTokenSushi";
 import numbro from "numbro";
-//COVALENT API Key
+
+// COVALENT API Key
 const APIKey = process.env.NEXT_PUBLIC_COVALENT_APIKEY;
 const chainID = 1;
 const dexName = "sushiswap";
@@ -59,9 +60,7 @@ export default function TokenSushi() {
     return res.json();
   });
 
-  const chainItems = data?.data?.items;
-
-  // console.log(chainItems);
+  const chainItems = data?.data?.items || []; // Fallback to an empty array if undefined
 
   if (isFetching) return <Progress size="xs" isIndeterminate />;
 
@@ -80,7 +79,6 @@ export default function TokenSushi() {
 
   return (
     <>
-      {" "}
       <div>
         <EcosystemTokenSushi />
 
@@ -127,42 +125,50 @@ export default function TokenSushi() {
               </TableRow>
             </TableHead>
             <TableBody>
-              {chainItems
-                .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-                .map((items) => (
-                  <Tr key={items.chain_id}>
-                    <Td color={useColorModeValue("inherit", "gray.200")}>
-                      {items.contract_name}
-                    </Td>
-                    <Td color={useColorModeValue("inherit", "gray.200")}>
-                      {items.contract_ticker_symbol}
-                    </Td>
-                    <Td color={useColorModeValue("inherit", "gray.200")}>
-                      {numbro(items.total_liquidity_quote).formatCurrency({
-                        average: true,
-                        mantissa: 2,
-                        optionalMantissa: true,
-                      })}
-                    </Td>
-                    <Td color={useColorModeValue("inherit", "gray.200")}>
-                      {numbro(items.total_volume_24h_quote).formatCurrency({
-                        average: true,
-                        mantissa: 2,
-                        optionalMantissa: true,
-                      })}
-                    </Td>
-                    <Td color={useColorModeValue("inherit", "gray.200")}>
-                      {numbro(items.quote_rate).formatCurrency({
-                        average: true,
-                        mantissa: 2,
-                        optionalMantissa: true,
-                      })}
-                    </Td>
-                    <Td color={useColorModeValue("inherit", "gray.200")}>
-                      {items.swap_count_24h}
-                    </Td>
-                  </Tr>
-                ))}
+              {chainItems.length > 0 ? (
+                chainItems
+                  .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+                  .map((items) => (
+                    <Tr key={items.chain_id}>
+                      <Td color={useColorModeValue("inherit", "gray.200")}>
+                        {items.contract_name}
+                      </Td>
+                      <Td color={useColorModeValue("inherit", "gray.200")}>
+                        {items.contract_ticker_symbol}
+                      </Td>
+                      <Td color={useColorModeValue("inherit", "gray.200")}>
+                        {numbro(items.total_liquidity_quote).formatCurrency({
+                          average: true,
+                          mantissa: 2,
+                          optionalMantissa: true,
+                        })}
+                      </Td>
+                      <Td color={useColorModeValue("inherit", "gray.200")}>
+                        {numbro(items.total_volume_24h_quote).formatCurrency({
+                          average: true,
+                          mantissa: 2,
+                          optionalMantissa: true,
+                        })}
+                      </Td>
+                      <Td color={useColorModeValue("inherit", "gray.200")}>
+                        {numbro(items.quote_rate).formatCurrency({
+                          average: true,
+                          mantissa: 2,
+                          optionalMantissa: true,
+                        })}
+                      </Td>
+                      <Td color={useColorModeValue("inherit", "gray.200")}>
+                        {items.swap_count_24h}
+                      </Td>
+                    </Tr>
+                  ))
+              ) : (
+                <Tr>
+                  <Td colSpan={6} textAlign="center">
+                    No data available
+                  </Td>
+                </Tr>
+              )}
             </TableBody>
             <TableFooter>
               <TablePagination

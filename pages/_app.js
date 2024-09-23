@@ -1,5 +1,5 @@
 import { ChakraProvider } from "@chakra-ui/react";
-import { useState } from "react";
+import theme from "../theme"; // Import your custom theme
 
 // import react-query
 import { QueryClient, QueryClientProvider } from "react-query";
@@ -15,7 +15,7 @@ const queryClient = new QueryClient({
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ChakraProvider>
+    <ChakraProvider theme={theme}>
       <QueryClientProvider client={queryClient}>
         <Component {...pageProps} />
       </QueryClientProvider>

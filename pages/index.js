@@ -1,7 +1,5 @@
 import Head from "next/head";
-
-// Chakra imports
-import { Box } from "@chakra-ui/layout";
+import { Box, Flex } from "@chakra-ui/react"; // Use Flex for layout
 import { FooterPage, SideNavbar } from "../components";
 
 export default function Home() {
@@ -11,10 +9,17 @@ export default function Home() {
         <title>DashDEX - DeX Dashboard</title>
         <meta name="description" content="DEX Dashboard" />
       </Head>
-      <Box>
-        <SideNavbar />
-        <FooterPage />
-      </Box>
+      <Flex direction="column" minHeight="100vh">
+        {" "}
+        {/* Flex container */}
+        <Box flex="1">
+          {" "}
+          {/* Content area */}
+          <SideNavbar />
+          {/* Add other page content here */}
+        </Box>
+        <FooterPage /> {/* Footer will be pushed to the bottom */}
+      </Flex>
     </>
   );
 }

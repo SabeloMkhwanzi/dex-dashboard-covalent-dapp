@@ -1,8 +1,8 @@
 // pages/_document.js
-import { ColorModeScript } from "@chakra-ui/react"
+import { ColorModeScript } from "@chakra-ui/react";
 // eslint-disable-next-line @next/next/no-document-import-in-page
-import NextDocument, { Html, Head, Main, NextScript } from "next/document"
-import theme from '../theme'
+import NextDocument, { Html, Head, Main, NextScript } from "next/document";
+import theme from "../theme"; // Import your theme here
 
 export default class Document extends NextDocument {
   render() {
@@ -10,12 +10,12 @@ export default class Document extends NextDocument {
       <Html lang="en">
         <Head />
         <body>
-          {/* 👇 Here's the script */}
+          {/* This script ensures the initial color mode is applied */}
           <ColorModeScript initialColorMode={theme.config.initialColorMode} />
           <Main />
           <NextScript />
         </body>
       </Html>
-    )
+    );
   }
 }

@@ -176,14 +176,6 @@ export default function SideNavbar() {
             />
           </InputGroup>
 
-          <Box
-            as="iframe"
-            src="https://coinhippo.io?widget=price-marquee&theme=?"
-            title="Price Update"
-            frameBorder="0"
-            width="100%"
-            height="35"
-          />
           <Flex align="center">
             <IconButton
               borderRadius="lg"
